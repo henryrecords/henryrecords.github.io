@@ -7,13 +7,18 @@
         background-image: url(https://henryrecords.github.io/years/2019/literature/story/1/chapter-1/chapter1-1.jpg);
         background-attachment: fixed;
       } 
-    #myVideo {
-      position: fixed;
-      right: 0%;
-      bottom: 0%;
-      width: 100%;
+    video.fullscreen { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
 
-    }
     h1 {
     }
   </style>
