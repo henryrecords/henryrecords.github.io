@@ -1,5 +1,4 @@
-<script language="JavaScript">
-      <!--hide
+
       var password;
       var pass1="wsy072303";
       password=prompt('请输入密码','');
@@ -9,5 +8,4 @@
       {
         window.location="http://www.google.com";
       }
-      //-->
-    </script>
+
