@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>大門</title>
+    <title>密码</title>
     <style>
     </style>
-    <script language="JavaScript">
-      <!--hide
-      var password;
-      var pass1="wsy072303";
-      password=prompt('请输入密码','');
-      if (password==pass1)
-        alert('密码正确，请确认是否进入');
-      else
-      {
-        window.location="http://www.google.com";
-      }
-      //-->
-    </script>
   </head>
   <body>
-    <h1>歡迎，這裏是通往回憶世界的大門。</h1>
-    <p>The name of people in this list may have the access to the memory-world.</p>
-    <ul>
-      <li>魏少洋 Henry ヘンリ</li>
-    </ul>
-    <p><a href="https://henryrecords.github.io/watch.html">魏少洋</a></p>
-    <br>
-    
-    <h1>歡迎，這裏是通往另一個世界的大門。</h1>
-    <p>The name of people in this list may have the access to the world.</p>
-    <ul>
-      <li>魏林昕</li>
-    </ul>
-    <p><a href="https://henryrecords.github.io/wolf.html">魏林昕</a></p>
-    <br>
-    <p style="color:red;">*Important Note: please use screen resolution of 1366x768!!!*</p>
-    <p style="color:red;">*And press F11 for full screen!!!*</p>
+    <form>
+    <label for="pswd">请输入密码</label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "wsy072303";
+        var confirmPassword2 = "clx080703";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="home.html";
+        }
+        else if (password == confirmPassword2) {
+             window.location="www.google.com";
+        else{
+            alert("密码不正确^^");
+        }
+    }
+</script>
   </body>
 </html>
