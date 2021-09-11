@@ -12,8 +12,15 @@
   </head>
   <body>
     <form style="margin: 0 auto; width:25%;">
-    <input type="password" id="pswd" onkeydown="checkPswd();" />
-</form>
+      <input type="password" id="pswd" onkeydown="if (event.keyCode == 13)
+                        document.getElementById('btnSearch').click()"/>
+    </form>
+    
+    <input type = "button"
+       id = "btnSearch"
+       value = "Search"
+       onclick = "checkPswd();"/>
+    
 <script type="text/javascript">
     function checkPswd() {
         var confirmPassword = "wsy07230";
