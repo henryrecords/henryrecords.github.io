@@ -15,12 +15,13 @@
     </style>
   </head>
   <body>
+    <div id="body" hidden>
     <a href="sub-index/recentupdate"><h1>2019/10/18 News</h1></a>
     <a href="sub-index/recentupdate2"><h1>2021/09/11 News</h1></a>
 
     
       <input type="password" id="pswd" onkeydown="if (event.keyCode == 51)
-                        document.getElementById('btnSearch').click()" style="background-color: blue; color:white; opacity:0.3;
+                        checkPswd()" style="background-color: blue; color:white; opacity:0.3;
                                position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"/>
 
     <input type = "button"
@@ -28,8 +29,13 @@
        value = "Search"
        onclick = "checkPswd();" hidden/>
     
-    <button onclick="openFullscreen();" style="position:absolute; left:0px; bottom:0px;">Open Fullscreen</button>
-    <button onclick="closeFullscreen();" style="position:absolute; right:0px; bottom:0px;">Close Fullscreen</button>
+    
+      <button onclick="closeFullscreen(); hide()" style="position:absolute; right:0px; bottom:0px;">Close Fullscreen</button>
+    </div>
+      
+      <button onclick="openFullscreen(); hide()" style="position:absolute; left:0px; bottom:0px;">Open Fullscreen</button>
+      
+      
     <script>
 var elem = document.documentElement;
 function openFullscreen() {
@@ -52,7 +58,16 @@ function closeFullscreen() {
   }
 }
 </script>
-    
+    <script>
+      function hide() {
+  var x = document.getElementById("body");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+    </script>
     
 <script type="text/javascript">
     function checkPswd() {
