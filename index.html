@@ -28,8 +28,7 @@
       <button onclick="closeFullscreen(); hide()" style="position:absolute; right:0px; bottom:0px;">Close Fullscreen</button>
     </div>
       
-      <button onclick="openFullscreen();" style="position:absolute; left:0px; bottom:0px;">Open Fullscreen</button>
-      <button onclick="hide();" style="position:absolute; left:0px; bottom:0px;">Open Fullscreen</button>
+      <button onclick="openFullscreen();hide();" style="position:absolute; left:0px; bottom:0px;">Open Fullscreen</button>
       
       
     <script>
@@ -56,10 +55,10 @@ function closeFullscreen() {
       
       function hide() {
   var x = document.getElementById("body");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
+  if (x.style.display === "block") {
     x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
 }
 </script>
