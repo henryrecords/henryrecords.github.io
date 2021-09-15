@@ -28,6 +28,32 @@
        value = "Search"
        onclick = "checkPswd();" hidden/>
     
+    <button onclick="openFullscreen();" style="position:absolute; left:0px; bottom:0px;">Open Fullscreen</button>
+    <button onclick="closeFullscreen();" style="position:absolute; right:0px; bottom:0px;">Close Fullscreen</button>
+    <script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
+    
+    
 <script type="text/javascript">
     function checkPswd() {
         var confirmPassword = "wsy07230";
