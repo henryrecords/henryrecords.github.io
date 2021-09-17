@@ -6,11 +6,63 @@
     </style>
   </head>
   <body>
+    <div id="body" hidden>
     <h1>歡迎，這裏是通往回憶世界的大門。</h1>
     <ul>
       <li>魏少洋 Henry ヘンリ</li>
       <br>
       <a href="home.html" style="text-decoration:none;color=black;"><button style="width:150px;">进入</button></a>
     </ul>
+    <button onclick="closeFullscreen(); hide();" style="position:absolute; right:0px; bottom:0px;">Close</button>
+    </div>
+    
+    <div id="2">
+      <button onclick="openFullscreen(); show();" style="position:absolute; left:0px; bottom:0px;">Open</button>
+    </div>
+    
+    <script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+      
+      function show() {
+  var x = document.getElementById("body");
+  var y = document.getElementById("2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+}
+      
+      function hide() {
+  var x = document.getElementById("body");
+  var y = document.getElementById("2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+    y.style.display = "block";
+}
+</script>
   </body>
 </html>
