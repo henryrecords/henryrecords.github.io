@@ -3,10 +3,13 @@
   <head>
     <title>密码</title>
     <style>
-      body{
+      .index{
         background-attachment: fixed;
         background-size: cover;
         background-image: url(images/index.png);
+      }
+      .picturewall{
+        background-color: black;
       }
       a{
         color:rgb(128, 255, 50);
@@ -19,6 +22,7 @@
     </style>
   </head>
   <body>
+    <div id="index">
     <div id="body" hidden>
     <a href="sub-index/recentupdate"><h1>2019/10/18 News</h1></a>
     <a href="sub-index/recentupdate2"><h1>2021/09/11 News</h1></a>
@@ -84,11 +88,14 @@ function closeFullscreen() {
     
 <script type="text/javascript">
     function checkPswd() {
+        var x = document.getElementById("index");
+        var y = document.getElementById("picturewall");
         var confirmPassword = "wsy07230";
         var confirmPassword2 = "clx08070";
         var password = document.getElementById("pswd").value;
         if (password == confirmPassword) {
-             window.location="sub-index/gate.html";
+             x.style.display = "none";
+             y.style.display = "block";
         }
         else if (password == confirmPassword2) {
              window.location="sub-index/depart.html";
@@ -98,5 +105,27 @@ function closeFullscreen() {
         }
     }
 </script>
+      </div>
+    <div id="picturewall">
+    <h1>Life, <a href="https://henryrecords.github.io/wolf.html">o</a>ne another.</h1>
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/1.jpg" alt="Nanami Mori" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/2.jpg" alt="Ziqiu" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/3.jpg" alt="Ai" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/4.jpg" alt="Yu" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/5.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/6.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/7.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/8.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/9.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/10.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/11.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/12.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/13.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/14.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/15.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/16.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/17.jpg" alt="" style="width: 200px; opacity: 0.3;">
+      <img src="https://henryrecords.github.io/images/sub-index/picturewall/18.jpg" alt="" style="width: 200px; opacity: 0.3;">
+    </div>
   </body>
 </html>
