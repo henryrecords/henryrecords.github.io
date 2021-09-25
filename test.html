@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="body">
+      <h1>HIIIIIIIII</h1>
+    </div>
+    <script>
+
+var elem = document.documentElement;
+var x = document.getElementById("body");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    x.style.display = "block";
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    x.style.display = "block";
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    x.style.display = "block";
+  } else if (document.exitFullscreen) {
+    x.style.display = "none";
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    x.style.display = "none";
+  } else if (document.msExitFullscreen) { /* IE11 */
+    x.style.display = "none";
+  }
+}
+    </script>
+  </body>
+</html>
