@@ -26,16 +26,14 @@ function openFullscreen() {
   }
 }
     </script>
-    <script>
-      var x = document.getElementById("body");
-      $(document).ready(function() {
-    $(document).keydown(function(e) {   
-      e.preventDefault();  
-      if (e.which == 51) {
-          x.style.display = "block";
-      }
+    <script type="text/javascript">
+$(document).ready(function() { 
+    $(document).keydown(function (e) {
+     if (e.which == 51) {
+       alert("51");
+    }
     });
-}); 
-      </script>
+});
+</script>
   </body>
 </html>
