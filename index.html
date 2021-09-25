@@ -229,10 +229,10 @@ function closeFullscreen() {
       <script>
     var x = document.getElementById("o");
     function o() {
-    if (x.style.opacity === "0.3") {
-      document.getElementById("o").style.opacity = "1";
-    } else if (x.style.opacity === "1") {
+    if (x.style.opacity === "1") {
       document.getElementById("o").style.opacity = "0.3";
+    } else {
+      document.getElementById("o").style.opacity = "1";
     }
     }
       </script>
