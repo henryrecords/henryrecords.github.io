@@ -38,15 +38,15 @@
     <a href="sub-index/recentupdate2"><h1>2021/09/11 News</h1></a>
 
     
-      <input type="password" id="pswd" onkeydown="if (event.keyCode == 9)
+      <input type="password" id="pswd" onkeydown="if (event.keyCode == 51)
                         checkPswd()" style="background-color: blue; color:white; opacity:0.5;
                                position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"/>
     
     
-      <button onclick="closeFullscreen(); hide();" style="position:absolute; right:0px; bottom:0px;">Close</button>
+      <button onkeydown="if (event.keyCode == 9) closeFullscreen(); hide();" style="position:absolute; left:0px; top:0px;">Close</button>
     </div>
     <div id="2">
-      <button onclick="openFullscreen(); show();" style="position:absolute; left:0px; bottom:0px;">Open</button>
+      <button onkeydown="if (event.keyCode == 9) openFullscreen(); show();" style="position:absolute; left:0px; bottom:0px;">Open</button>
     </div>
       
       
