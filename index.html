@@ -225,10 +225,20 @@ function closeFullscreen() {
              document.getElementById("pic18").style.opacity = "0.3";
     }
 </script>
-      
+
+      <script>
+    var x = document.getElementById("o");
+    function o() {
+    if (x.style.opacity === "0.3") {
+      document.getElementById("o").style.opacity = "1";
+    } else if (x.style.opacity === "1") {
+      document.getElementById("o").style.opacity = "0.3";
+    }
+    }
+      </script>
       </div>
     <div id="picturewall" hidden>
-    <h1 style="text-align: center; color: white; opacity:0.3;">Life, <a id="o">o</a>ne another.</h1>
+    <h1 style="text-align: center; color: white; opacity:0.3;">Life, <a id="o" onclick="o()" >o</a>ne another.</h1>
       <img id="pic1" onmouseover="light1()" onmouseout="dark1()" src="https://henryrecords.github.io/images/sub-index/picturewall/1.jpg" alt="Nanami Mori" style="width: 200px; opacity: 0.3;">
       <img id="pic2" onmouseover="light2()" onmouseout="dark2()" src="https://henryrecords.github.io/images/sub-index/picturewall/2.jpg" alt="Ziqiu" style="width: 200px; opacity: 0.3;">
       <img id="pic3" onmouseover="light3()" onmouseout="dark3()" src="https://henryrecords.github.io/images/sub-index/picturewall/3.jpg" alt="Ai" style="width: 200px; opacity: 0.3;">
