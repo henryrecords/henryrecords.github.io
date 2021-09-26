@@ -208,7 +208,7 @@
 				</h1>
 
 				<div style="text-align:center">
-					<input type="text" id="next2" onkeydown="if (event.keyCode == 78) next2()" style="background-color: transparent; text-align: center; color: white; border-radius: 50px; padding: 10px;" placeholder="千と千尋の神隠し"/>
+					<input type="text" id="next2" onkeydown="if ((event.keyCode == 78) || (event.keyCode == 73)) next2()" style="background-color: transparent; text-align: center; color: white; border-radius: 50px; padding: 10px;" placeholder="千と千尋の神隠し"/>
 				</div>
 				
 				<img class="pictures" id="pic10" onmouseover="light10()" onmouseout="dark10()" src="https://henryrecords.github.io/images/sub-index/picturewall2/9.jpg" alt="">
@@ -621,8 +621,12 @@
 			var confirmPassword5 = "aaron li";
 			var confirmPassword6 = "Aaron li";
 			var confirmPassword7 = "aaron Li";
+			var confirmPassword8 = "Aaron L";
+			var confirmPassword9 = "aaron l";
+			var confirmPassword10 = "Aaron l";
+			var confirmPassword11 = "aaron L";
         		var password = document.getElementById("next2").value;
-        			if ((password == confirmPassword) || (password == confirmPassword2) || (password == confirmPassword3) || (password == confirmPassword4) || (password == confirmPassword5) || (password == confirmPassword6) || (password == confirmPassword7)) {
+        			if ((password == confirmPassword) || (password == confirmPassword2) || (password == confirmPassword3) || (password == confirmPassword4) || (password == confirmPassword5) || (password == confirmPassword6) || (password == confirmPassword7) || (password == confirmPassword8) || (password == confirmPassword9) || (password == confirmPassword10) || (password == confirmPassword11)) {
              				next2to1();
 				}
  	   		}
