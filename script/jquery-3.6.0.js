@@ -2,10 +2,10 @@
  * https://code.jquery.com/jquery-3.6.0.js
  * jQuery JavaScript Library v3.6.0
  * https://jquery.com/
- *
+ * 
  * Includes Sizzle.js
  * https://sizzlejs.com/
- *
+ * 
  * Copyright OpenJS Foundation and other contributors
  * Released under the MIT license
  * https://jquery.org/license
