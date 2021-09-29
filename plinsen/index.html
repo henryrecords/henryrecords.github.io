@@ -161,23 +161,114 @@
 				font-family: monospace;
 				color: green;
 			}
+			
+			#terminal1 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal1.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal2 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal2.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal3 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal3.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal4 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal4.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal5 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal5.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal6 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal6.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal7 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal7.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal8 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal8.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			
+			#terminal9 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal9.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
 		</style>
 	</head>
 
 	<body>
 		<div id="index">
-			<p style="font-family: monospace; color: green;">CENTROLIZED //..TERMINAL..//</p>
-			<p style="font-family: monospace; color: green;">INITIALIZING //..TERMINAL..//</p>
-			<p class="terminal">//LOADING ..DATA..</p>
-			<p class="terminal">//CLASSFILE.SET //TRUE//</p>
-			<p class="terminal">//DESTINATION.GET //LOCAL//</p>
-			<p style="font-family: monospace; color: green;">..</p>
-			<p class="terminal">..PLINTON AIRSHIP CONTROL</p>
-			<p class="terminal">..YEAR 2021</p>
-			<p class="terminal">..WELCOME</p>
+			
+			<p id="terminal1" class="terminal">CENTROLIZED //..TERMINAL..//</p>
+			<p id="terminal2" class="terminal">INITIALIZING //..TERMINAL..//</p>
+			<p id="terminal3" class="terminal">//LOADING ..DATA..</p>
+			<p id="terminal4" class="terminal">//CLASSFILE.SET //TRUE//</p>
+			<p id="terminal5" class="terminal">//DESTINATION.GET //LOCAL//</p>
+			<p id="terminal6" class="terminal">..</p>
+			<p id="terminal7" class="terminal">..PLINTON AIRSHIP CONTROL</p>
+			<p id="terminal8" class="terminal">..YEAR 2021</p>
+			<p id="terminal9" class="terminal">..WELCOME</p>
 			
 			<div id="indexshow">
-				<button onclick="openFullscreen(); indexshow();" style="position:absolute; left:0px; top:50%; bottom: 0px; opacity: 0;"></button>
+				<button onclick="terminal(); openFullscreen(); indexshow();" style="position:absolute; left:0px; top:0px; bottom: 0px; right: 0px; opacity: 0;"></button>
 			</div>
 			
 			<div id="password">
@@ -665,6 +756,27 @@
 			.blur(function() {
 				$(this).attr('placeholder', '千と千尋の神隠し')
 			})
+			
+			function terminal() {
+			var a = document.getElementById("terminal1");
+			var b = document.getElementById("terminal2");
+			var c = document.getElementById("terminal3");
+			var d = document.getElementById("terminal4");
+			var e = document.getElementById("terminal5");
+			var f = document.getElementById("terminal6");
+			var g = document.getElementById("terminal7");
+			var h = document.getElementById("terminal8");
+			var i = document.getElementById("terminal9");
+				a.classList.toggle('fadein');
+				b.classList.toggle('fadein');
+				c.classList.toggle('fadein');
+				d.classList.toggle('fadein');
+				e.classList.toggle('fadein');
+				f.classList.toggle('fadein');
+				g.classList.toggle('fadein');
+				h.classList.toggle('fadein');
+				i.classList.toggle('fadein');
+			}
 		</script>
 	</body>
 </html>
