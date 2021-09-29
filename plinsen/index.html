@@ -162,22 +162,12 @@
 				color: green;
 			}
 			
-			#terminal1 {
-				visibility:hidden;
-				opacity:0;
-			}			
-			#terminal1.fadein {
-				transition: visibility 1s linear, opacity 1s linear;
-				visibility:visible;
-				opacity:1;
-			}
-			
 			#terminal2 {
 				visibility:hidden;
 				opacity:0;
 			}			
 			#terminal2.fadein {
-				transition: visibility 1s linear 1s, opacity 1s linear 1s;
+				transition: visibility 0s linear 1s, opacity 0s linear 1s;
 				visibility:visible;
 				opacity:1;
 			}
@@ -187,7 +177,7 @@
 				opacity:0;
 			}			
 			#terminal3.fadein {
-				transition: visibility 1s linear 2s, opacity 1s linear 2s;
+				transition: visibility 0s linear 1.5s, opacity 0s linear 1.5s;
 				visibility:visible;
 				opacity:1;
 			}
@@ -197,7 +187,7 @@
 				opacity:0;
 			}			
 			#terminal4.fadein {
-				transition: visibility 1s linear 3s, opacity 1s linear 3s;
+				transition: visibility 0s linear 2s, opacity 0s linear 2s;
 				visibility:visible;
 				opacity:1;
 			}
@@ -207,7 +197,7 @@
 				opacity:0;
 			}			
 			#terminal5.fadein {
-				transition: visibility 1s linear 4s, opacity 1s linear 4s;
+				transition: visibility 1s linear 6s, opacity 1s linear 6s;
 				visibility:visible;
 				opacity:1;
 			}
@@ -217,7 +207,7 @@
 				opacity:0;
 			}			
 			#terminal6.fadein {
-				transition: visibility 1s linear 5s, opacity 1s linear 5s;
+				transition: visibility 1s linear 6.5s, opacity 1s linear 6.5s;
 				visibility:visible;
 				opacity:1;
 			}
@@ -227,7 +217,7 @@
 				opacity:0;
 			}			
 			#terminal7.fadein {
-				transition: visibility 1s linear 6s, opacity 1s linear 6s;
+				transition: visibility 1s linear 6.7s, opacity 1s linear 6.7s;
 				visibility:visible;
 				opacity:1;
 			}
@@ -237,7 +227,7 @@
 				opacity:0;
 			}			
 			#terminal8.fadein {
-				transition: visibility 1s linear 6.3s, opacity 1s linear 6.3s;
+				transition: visibility 1s linear 6.9s, opacity 1s linear 6.9s;
 				visibility:visible;
 				opacity:1;
 			}
@@ -758,7 +748,6 @@
 			})
 			
 			function terminal() {
-			var a = document.getElementById("terminal1");
 			var b = document.getElementById("terminal2");
 			var c = document.getElementById("terminal3");
 			var d = document.getElementById("terminal4");
@@ -767,7 +756,6 @@
 			var g = document.getElementById("terminal7");
 			var h = document.getElementById("terminal8");
 			var i = document.getElementById("terminal9");
-				a.classList.toggle('fadein');
 				b.classList.toggle('fadein');
 				c.classList.toggle('fadein');
 				d.classList.toggle('fadein');
