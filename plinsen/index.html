@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>密码</title>
+		<script type="text/javascript" src="https://henryrecords.github.io/script/jquery-3.6.0.js"></script>
+		<style>
+			#index {
+        			background-attachment: fixed;
+        			background-size: cover;
+        			background-image: url(https://henryrecords.github.io/images/index.png);
+        			position: absolute;
+        			bottom: 0;
+        			right: 0;
+        			left: 0;
+        			top: 0;
+			}
+			#index.fadeout {
+				transition: visibility 2s linear, opacity 2s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+
+			#password {
+				visibility:hidden;
+				opacity:0;
+			}
+
+			#password.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1;
+			}
+			#password.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			#password.fadeoutbutton {
+				transition: visibility 0s linear, opacity 0s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+
+			#index2 {
+        			background-attachment: fixed;
+        			background-size: cover;
+        			position: absolute;
+        			bottom: 0;
+        			right: 0;
+        			left: 0;
+        			top: 0;
+				visibility:hidden;
+				opacity:0;
+			}
+			#index2.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index2.fadein {
+				transition: visibility 2s linear, opacity 2s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+
+			#picturewall {
+		        	background-color: black;
+		        	position: absolute;
+		        	bottom: 0;
+ 			       	right: 0;
+ 			       	left: 0;
+ 			       	top: 0;
+				visibility:hidden;
+				opacity:0;
+			}
+			#picturewall.fadeout {
+				visibility:hidden;
+				opacity: 0;
+				transition: visibility 2s linear, opacity 2s linear;
+			}
+			#picturewall.fadein {
+				visibility:visible;
+				opacity:1; 
+				transition: opacity 1s linear;
+			}
+
+			#index2show {
+        			background-attachment: fixed;
+        			background-size: cover;
+        			background-image: url();
+        			position: absolute;
+        			bottom: 0;
+        			right: 0;
+        			left: 0;
+        			top: 0;
+				visibility:hidden;
+				opacity:0;
+			}
+			#index2show.fadeout {
+				transition: visibility 2s linear, opacity 2s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index2show.fadein {
+				transition: visibility 0s linear, opacity 0s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+
+			#password.fadeoutbutton {
+				transition: visibility 0s linear, opacity 0s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+
+			#updating {
+				background-color: white;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				top: 0;
+				visibility:hidden;
+				opacity:0;
+			}
+			#updating.fadein {
+				transition: opacity 2s linear;
+				visibility:visible;
+				opacity:1;
+			}
+			#updating.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+
+			.recentupdate{
+				color:rgb(128, 255, 50);
+				text-decoration:none;
+			}
+
+			.pictures {
+				transition: opacity 1s linear;
+			}
+
+			#next2:focus {
+				outline: none;
+			}
+			
+			.pictures {
+				width: 10.9%;
+				opacity: 0.2;
+			}	
+		</style>
+	</head>
+
+	<body>
+		<div id="index">
+			<div id="password">
+				<a class="recentupdate" tabindex="2" href="https://www.zhangweishihundan.com/"><h1>2019/10/18 News</h1></a>
+				<a class="recentupdate" tabindex="2" href="https://www.google.com/search?q=8004963&rlz=1C1ONGR_enUS962US962&oq=8004963&aqs=chrome..69i57j69i61.4810j0j4&sourceid=chrome&ie=UTF-8"><h1>2021/09/26 News</h1></a>
+				<input type="password" id="next" onkeydown="if (event.keyCode == 51) next()" style="background-color: blue; color: white; opacity: 0.5; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"/>
+				<button onclick="" style="position:absolute; left:0px; bottom:50%; top:0px; opacity:0;"></button>
+				<button onclick="" style="position:absolute; right:0px; bottom:50%; top:0px; opacity:0;"></button>
+				<button onclick="closeFullscreen(); indexhide();" style="position:absolute; right:0px; top:50%; bottom: 0px; opacity: 0;"></button>
+			</div>
+			<div id="indexshow">
+				<button onclick="openFullscreen(); indexshow();" style="position:absolute; left:0px; top:50%; bottom: 0px; opacity: 0;"></button>
+			</div>
+		</div>
+		
+		<div id="index2">
+			<div id="picturewall">
+				<img class="pictures" id="pic1" onmouseover="light1()" onmouseout="dark1()" src="https://henryrecords.github.io/images/sub-index/picturewall2/1.jpg" alt="">
+				<img class="pictures" id="pic2" onmouseover="light2()" onmouseout="dark2()" src="https://henryrecords.github.io/images/sub-index/picturewall2/16.jpg" alt="">
+				<img class="pictures" id="pic3" onmouseover="light3()" onmouseout="dark3()" src="https://henryrecords.github.io/images/sub-index/picturewall2/3.jpg" alt="">
+				<img class="pictures" id="pic4" onmouseover="light4()" onmouseout="dark4()" src="https://henryrecords.github.io/images/sub-index/picturewall2/15.jpg" alt="">
+				<img class="pictures" id="pic5" onmouseover="light5()" onmouseout="dark5()" src="https://henryrecords.github.io/images/sub-index/picturewall2/2.jpg" alt="">
+				<img class="pictures" id="pic6" onmouseover="light6()" onmouseout="dark6()" src="https://henryrecords.github.io/images/sub-index/picturewall2/6.jpg" alt="">
+				<img class="pictures" id="pic7" onmouseover="light7()" onmouseout="dark7()" src="https://henryrecords.github.io/images/sub-index/picturewall2/5.jpg" alt="">
+				<img class="pictures" id="pic8" onmouseover="light8()" onmouseout="dark8()" src="https://henryrecords.github.io/images/sub-index/picturewall2/18.jpg" alt="">
+				<img class="pictures" id="pic9" onmouseover="light9()" onmouseout="dark9()" src="https://henryrecords.github.io/images/sub-index/picturewall2/10.jpg" alt="">
+				
+				<h1 style="text-align: center; color: white; -webkit-touch-callout: none; /* iOS Safari */ -webkit-user-select: none; /* Safari */ -khtml-user-select: none; /* Konqueror HTML */ -moz-user-select: none; /* Old versions of Firefox */ -ms-user-select: none; /* Internet Explorer/Edge */ user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */">
+					<a id="L" onclick="L()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">L</a>
+					<a id="i" onclick="i()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">i</a>
+					<a id="f" onclick="f()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">f</a>
+					<a id="e1" onclick="e1()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">e</a>
+					<a id="t1" onclick="t1()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">, </a>
+					<a id="" onclick="" style="text-decoration:none; color:white; cursor: default; opacity:0;">;</a>
+					<a id="o1" onclick="o1()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">o</a>
+					<a id="n1" onclick="n1()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">n</a>
+					<a id="e2" onclick="e2()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">e</a>
+					<a id="" onclick="" style="text-decoration:none; color:white; cursor: default; opacity:0;">;</a>
+					<a id="a" onclick="a()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">a</a>	
+					<a id="n2" onclick="n2()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">n</a>
+					<a id="o2" onclick="o2()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">o</a>
+					<a id="t" onclick="t()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">t</a>
+					<a id="h" onclick="h()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">h</a>	
+					<a id="e3" onclick="e3()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">e</a>
+					<a id="r" onclick="r()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">r</a>
+					<a id="t2" onclick="t2()" style="text-decoration:none; color:white; cursor: pointer; opacity:1;">.</a>
+				</h1>
+
+				<div style="text-align:center">
+					<input type="text" id="next2" onkeydown="if ((event.keyCode == 78) || (event.keyCode == 73)) next2()" style="background-color: transparent; text-align: center; color: white; border-radius: 50px; padding: 10px;" placeholder="千と千尋の神隠し"/>
+				</div>
+				
+				<img class="pictures" id="pic10" onmouseover="light10()" onmouseout="dark10()" src="https://henryrecords.github.io/images/sub-index/picturewall2/9.jpg" alt="">
+				<img class="pictures" id="pic11" onmouseover="light11()" onmouseout="dark11()" src="https://henryrecords.github.io/images/sub-index/picturewall2/7.jpg" alt="">
+				<img class="pictures" id="pic12" onmouseover="light12()" onmouseout="dark12()" src="https://henryrecords.github.io/images/sub-index/picturewall2/12.jpg" alt="">
+				<img class="pictures" id="pic13" onmouseover="light13()" onmouseout="dark13()" src="https://henryrecords.github.io/images/sub-index/picturewall2/13.jpg" alt="">
+				<img class="pictures" id="pic14" onmouseover="light14()" onmouseout="dark14()" src="https://henryrecords.github.io/images/sub-index/picturewall2/14.jpg" alt="">
+				<img class="pictures" id="pic15" onmouseover="light15()" onmouseout="dark15()" src="https://henryrecords.github.io/images/sub-index/picturewall2/17.jpg" alt="">
+				<img class="pictures" id="pic16" onmouseover="light16()" onmouseout="dark16()" src="https://henryrecords.github.io/images/sub-index/picturewall2/4.jpg" alt="">
+				<img class="pictures" id="pic17" onmouseover="light17()" onmouseout="dark17()" src="https://henryrecords.github.io/images/sub-index/picturewall2/11.jpg" alt="">
+				<img class="pictures" id="pic18" onmouseover="light18()" onmouseout="dark18()" src="https://henryrecords.github.io/images/sub-index/picturewall2/8.jpg" alt="">
+
+				<button onclick="closeFullscreen(); index2hide();" style="position:absolute; right:0px; top:50%; bottom: 0px; opacity: 0;"></button>
+			</div>
+
+			<div id="index2show">
+				<button onclick="openFullscreen(); index2show();" style="position:absolute; left:0px; top:50%; bottom:0px; opacity: 0;"></button>
+				<h1 style="position: absolute; top: 30%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">Yay^^</h1>
+				<h2 style="position: absolute; top: 40%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">You found the pause button!</h2>
+				<h5 style="position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">It took sooo long for me to make it~</h5>
+				<p style="position: absolute; top: 60%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">How could we return though??</p>
+			</div>
+		</div>
+
+		<div id="updating">
+			<h1 style="position: absolute; top: 40%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">Congratulations! Updates Coming Soon!</h1>
+			<p style="color: red; position: absolute; bottom: 40%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">Press ESC to Exit Fullscreen^^</p>
+		</div>
+
+		<script>			
+			function openFullscreen() {
+			var elem = document.documentElement;
+				if (elem.requestFullscreen) {
+					elem.requestFullscreen();
+				}
+				else if (elem.webkitRequestFullscreen) { /* Safari */
+					elem.webkitRequestFullscreen();
+				}
+				else if (elem.msRequestFullscreen) { /* IE11 */
+					elem.msRequestFullscreen();
+				}
+			}
+			function closeFullscreen() {
+			var elem = document.documentElement;
+				if (document.exitFullscreen) {
+					document.exitFullscreen();
+				}
+				else if (document.webkitExitFullscreen) { /* Safari */
+					document.webkitExitFullscreen();
+				}
+				else if (document.msExitFullscreen) { /* IE11 */
+					document.msExitFullscreen();
+				}
+			}
+      
+			function indexshow() {
+			var x = document.getElementById("password");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("password");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeoutbutton');
+				y.style.visibility = "visible";
+			}
+
+			function next() {
+				var x = document.getElementById("index");
+				var y = document.getElementById("picturewall");
+				var z = document.getElementById("index2");
+				var confirmPassword = "800496";
+				var password = document.getElementById("next").value;
+				if (password == confirmPassword) {
+					x.classList.remove("fadein");
+					x.classList.remove("fadeout");
+					x.classList.toggle('fadeout');
+					y.classList.remove("fadein");
+					y.classList.remove("fadeout");
+					y.classList.toggle('fadein');
+					z.classList.remove("fadein");
+					z.classList.remove("fadeout");
+					z.classList.toggle('fadein');
+				}
+			}
+
+			function index2show() {
+			var x = document.getElementById("picturewall");
+			var y = document.getElementById("index2show");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.classList.remove("fadein");
+				y.classList.remove("fadeout");
+				y.classList.toggle('fadeout');
+			}
+
+			function index2hide() {
+			var x = document.getElementById("picturewall");
+			var y = document.getElementById("index2show");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeoutbutton');
+				y.classList.remove("fadein");
+				y.classList.remove("fadeout");
+				y.classList.toggle('fadein');
+			}
+
+			function light1() {
+				document.getElementById("pic1").style.opacity = "1";
+			}
+			function dark1() {
+				document.getElementById("pic1").style.opacity = "0.2";
+			}
+			function light2() {
+				document.getElementById("pic2").style.opacity = "1";
+			}
+			function dark2() {
+				document.getElementById("pic2").style.opacity = "0.2";
+			}
+			function light3() {
+				document.getElementById("pic3").style.opacity = "1";
+			}
+			function dark3() {
+				document.getElementById("pic3").style.opacity = "0.2";
+			}
+			function light4() {
+				document.getElementById("pic4").style.opacity = "1";
+			}
+			function dark4() {
+				document.getElementById("pic4").style.opacity = "0.2";
+			}
+			function light5() {
+				document.getElementById("pic5").style.opacity = "1";
+			}
+			function dark5() {
+				document.getElementById("pic5").style.opacity = "0.2";
+			}
+			function light6() {
+				document.getElementById("pic6").style.opacity = "1";
+			}
+			function dark6() {
+				document.getElementById("pic6").style.opacity = "0.2";
+			}
+			function light7() {
+				document.getElementById("pic7").style.opacity = "1";
+			}
+			function dark7() {
+				document.getElementById("pic7").style.opacity = "0.2";
+			}
+			function light8() {
+				document.getElementById("pic8").style.opacity = "1";
+			}
+			function dark8() {
+				document.getElementById("pic8").style.opacity = "0.2";
+			}
+			function light9() {
+				document.getElementById("pic9").style.opacity = "1";
+			}
+			function dark9() {
+				document.getElementById("pic9").style.opacity = "0.2";
+			}
+			function light10() {
+				document.getElementById("pic10").style.opacity = "1";
+			}
+			function dark10() {
+				document.getElementById("pic10").style.opacity = "0.2";
+			}
+			function light11() {
+				document.getElementById("pic11").style.opacity = "1";
+			}
+			function dark11() {
+				document.getElementById("pic11").style.opacity = "0.2";
+			}
+			function light12() {
+				document.getElementById("pic12").style.opacity = "1";
+			}
+			function dark12() {
+				document.getElementById("pic12").style.opacity = "0.2";
+			}
+			function light13() {
+				document.getElementById("pic13").style.opacity = "1";
+			}
+			function dark13() {
+				document.getElementById("pic13").style.opacity = "0.2";
+			}
+			function light14() {
+				document.getElementById("pic14").style.opacity = "1";
+			}
+			function dark14() {
+				document.getElementById("pic14").style.opacity = "0.2";
+			}
+			function light15() {
+				document.getElementById("pic15").style.opacity = "1";
+			}
+			function dark15() {
+				document.getElementById("pic15").style.opacity = "0.2";
+			}
+			function light16() {
+				document.getElementById("pic16").style.opacity = "1";
+			}
+			function dark16() {
+				document.getElementById("pic16").style.opacity = "0.2";
+			}
+			function light17() {
+				document.getElementById("pic17").style.opacity = "1";
+			}
+			function dark17() {
+				document.getElementById("pic17").style.opacity = "0.2";
+			}
+			function light18() {
+				document.getElementById("pic18").style.opacity = "1";
+			}
+			function dark18() {
+				document.getElementById("pic18").style.opacity = "0.2";
+			}
+
+			function L() {
+			var x = document.getElementById("L");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function i() {
+			var x = document.getElementById("i");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function f() {
+			var x = document.getElementById("f");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function e1() {
+			var x = document.getElementById("e1");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function t1() {
+			var x = document.getElementById("t1");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function o1() {
+			var x = document.getElementById("o1");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function n1() {
+			var x = document.getElementById("n1");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function e2() {
+			var x = document.getElementById("e2");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function a() {
+			var x = document.getElementById("a");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function n2() {
+			var x = document.getElementById("n2");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function o2() {
+			var x = document.getElementById("o2");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function t() {
+			var x = document.getElementById("t");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function h() {
+			var x = document.getElementById("h");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function e3() {
+			var x = document.getElementById("e3");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function r() {
+			var x = document.getElementById("r");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+			function t2() {
+			var x = document.getElementById("t2");
+				if (x.style.opacity === "0.3") {
+					x.style.opacity = "1";
+					next2();
+				} 
+				else {
+					x.style.opacity = "0.3";
+					next2();
+				}
+			}
+
+			function next2() {
+        		var confirmPassword = "Aaro";
+			var confirmPassword2 = "Aaron";
+			var confirmPassword3 = "aaron";
+			var confirmPassword4 = "Aaron Li";
+			var confirmPassword5 = "aaron li";
+			var confirmPassword6 = "Aaron li";
+			var confirmPassword7 = "aaron Li";
+			var confirmPassword8 = "Aaron L";
+			var confirmPassword9 = "aaron l";
+			var confirmPassword10 = "Aaron l";
+			var confirmPassword11 = "aaron L";
+        		var password = document.getElementById("next2").value;
+        			if ((password == confirmPassword) || (password == confirmPassword2) || (password == confirmPassword3) || (password == confirmPassword4) || (password == confirmPassword5) || (password == confirmPassword6) || (password == confirmPassword7) || (password == confirmPassword8) || (password == confirmPassword9) || (password == confirmPassword10) || (password == confirmPassword11)) {
+             				next2to1();
+				}
+ 	   		}
+
+			function next2to1() {
+       			var x = document.getElementById("index2");
+			var y = document.getElementById("updating");
+				if ((document.getElementById("L").style.opacity === "0.3" && document.getElementById("f").style.opacity === "0.3" && document.getElementById("t1").style.opacity === "0.3" && document.getElementById("n1").style.opacity === "0.3" && document.getElementById("a").style.opacity === "0.3" && document.getElementById("o2").style.opacity === "0.3" && document.getElementById("h").style.opacity === "0.3" && document.getElementById("r").style.opacity === "0.3" && document.getElementById("i").style.opacity === "1" && document.getElementById("e1").style.opacity === "1" && document.getElementById("o1").style.opacity === "1" && document.getElementById("e2").style.opacity === "1" && document.getElementById("n2").style.opacity === "1" && document.getElementById("t").style.opacity === "1" && document.getElementById("e3").style.opacity === "1" && document.getElementById("t2").style.opacity === "1") || (document.getElementById("L").style.opacity === "1" && document.getElementById("f").style.opacity === "1" && document.getElementById("t1").style.opacity === "1" && document.getElementById("n1").style.opacity === "1" && document.getElementById("a").style.opacity === "1" && document.getElementById("o2").style.opacity === "1" && document.getElementById("h").style.opacity === "1" && document.getElementById("r").style.opacity === "1" && document.getElementById("i").style.opacity === "0.3" && document.getElementById("e1").style.opacity === "0.3" && document.getElementById("o1").style.opacity === "0.3" && document.getElementById("e2").style.opacity === "0.3" && document.getElementById("n2").style.opacity === "0.3" && document.getElementById("t").style.opacity === "0.3" && document.getElementById("e3").style.opacity === "0.3" && document.getElementById("t2").style.opacity === "0.3")) {
+					x.classList.remove("fadein");
+					x.classList.remove("fadeout");
+					x.classList.toggle('fadeout');
+					y.classList.remove("fadein");
+					y.classList.remove("fadeout");
+					y.classList.toggle('fadein');
+				}
+			}
+
+			$('#next2').focus(function() {
+				$(this).attr('placeholder', '君の名は。')
+			})
+			.blur(function() {
+				$(this).attr('placeholder', '千と千尋の神隠し')
+			})
+		</script>
+	</body>
+</html>
