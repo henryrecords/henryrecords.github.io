@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>白月光与朱砂痣</title>
+<style>
+  * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif; text-align: center; background-color:white;}
+
+.month {
+  padding: 70px 25px 10px 25px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  position: fixed;
+  background-color: black;
+  background-image:url(https://henryrecords.github.io/songs/month/oct/picture/bygyzsz.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  }
+  p {
+    color: black;
+  }
+</style>
+</head>
+<body>
+<div class="month">      
+  <h1>白月光与朱砂痣</h1>
+    <audio loop controls>
+    <source src="https://henryrecords.github.io/songs/month/oct/music/bygyzsz.mp3" type="audio/ogg">
+    </audio>
+</div>
+  <div style="padding-top: 270px;">
+<p>从前的歌谣 都在指尖绕</p>
+<p>得不到的美好 总在心间挠</p>
+<p>白饭粒无处抛 蚊子血也抹不掉</p>
+<p>触不可及刚刚好 日久天长让人恼</p>
+<br>
+<p>那时滚烫的心跳 也曾无处遁逃</p>
+<p>像一团烈火燃烧 烧尽跨不过的桥</p>
+<p>时光匆匆地跑 火焰化作月遥遥</p>
+<p>再无激荡的波涛 也从不在梦里飘摇</p>
+<br>
+<p>白月光在照耀 你才想起她的好</p>
+<p>朱砂痣久难消 你是否能知道</p>
+<p>窗前的明月照 你独自一人远眺</p>
+<p>白月光是年少 是她的笑</p>
+<br>
+<p>那时滚烫的心跳 也曾无处遁逃</p>
+<p>像一团烈火燃烧 烧尽跨不过的桥</p>
+<p>时光匆匆地跑 火焰化作月遥遥</p>
+<p>再无激荡的波涛 也从不在梦里飘摇</p>
+<br>
+<p>白月光在照耀 你才想起她的好</p>
+<p>朱砂痣久难消 你是否能知道</p>
+<p>窗前的明月照 你独自一人远眺</p>
+<p>白月光是年少 是她的笑</p>
+<br>
+<p>白月光在照耀 你才想起她的好</p>
+<p>朱砂痣久难消 你是否能知道</p>
+<p>窗前的明月照 你独自一人远眺</p>
+<p>白月光是年少 是她的笑</p>
+  <br></br>
+  </div>
+</body>
+</html>
