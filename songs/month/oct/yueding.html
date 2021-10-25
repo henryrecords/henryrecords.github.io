@@ -46,11 +46,12 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
 </style>
 </head>
 <body>
-	      <audio loop controls>
-      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
-      </audio>
+
       <div class="month2">      
       <h1 style="color: white;">约定</h1>
+	<audio loop controls id="hide">
+      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
+      </audio>
       </div>
       <div id="indexshow">
 		  <button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%;">显示歌词</button>
@@ -58,6 +59,9 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
   <div id="index">
     <div class="month">      
       <h1>约定</h1>
+	<audio loop controls id="show">
+      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
+      </audio>
     </div>
     <button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
   <div style="padding-top: 270px;">
@@ -110,6 +114,8 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
 				x.classList.remove("fadeoutbutton");
 				x.classList.toggle('fadein');
 				y.style.visibility = "hidden";
+				document.getElementById("show").style.visibility = "visible";
+				document.getElementById("hide").style.visibility = "hide";
 			}
       
 			function indexhide() {
