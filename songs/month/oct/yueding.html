@@ -29,6 +29,10 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
   p {
     color: white;
   }
+	#index {
+		visibility:hidden;
+				opacity:0;
+	}
   			#index.fadeout {
 				transition: visibility 1s linear, opacity 1s linear;
 				visibility:hidden;
@@ -117,7 +121,7 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
 				x.classList.remove("fadein");
 				x.classList.remove("fadeout");
 				x.classList.remove("fadeoutbutton");
-				x.classList.toggle('fadeoutbutton');
+				x.classList.toggle('fadeout');
 				y.style.visibility = "visible";
 			}
   </script>
