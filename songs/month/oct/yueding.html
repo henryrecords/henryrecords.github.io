@@ -17,18 +17,48 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
   background-attachment: fixed;
   background-size: cover;
   }
+.month2 {
+  padding: 70px 25px 10px 25px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  position: fixed;
+  background-color: black;
+  }
   p {
     color: white;
   }
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
 </style>
 </head>
 <body>
-<div class="month">      
-  <h1>约定</h1>
-    <audio loop controls>
-    <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
-    </audio>
-</div>
+      <div class="month2">      
+      <h1 style="color: white;">约定</h1>
+      <audio loop controls>
+      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
+      </audio>
+      </div>
+      <div id="indexshow">
+		  <button onclick="indexshow();" style="position: absolute; bottom: 0%; left: 0%;">显示歌词</button>
+		  </div>
+  <div id="index">
+    <div class="month">      
+      <h1>约定</h1>
+      <audio loop controls>
+      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
+      </audio>
+    </div>
+    <button onclick="closeFullscreen(); indexhide();" style="position:absolute; right:0px; bottom: 0px;">隐藏歌词</button>
   <div style="padding-top: 270px;">
 <p>还记得当天旅馆的门牌</p>
 <p>还留住笑着离开的神态</p>
@@ -69,5 +99,27 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
 <p>两鬓斑白都可认得你</p>
   <br></br>
   </div>
+  </div>
+  <script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeoutbutton');
+				y.style.visibility = "visible";
+			}
+  </script>
 </body>
 </html>
