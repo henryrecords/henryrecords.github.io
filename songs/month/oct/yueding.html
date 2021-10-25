@@ -67,7 +67,8 @@ body {font-family: Verdana, sans-serif; text-align: center;   background-image:u
       <div id="indexshow">
 		  <button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%;">显示歌词</button>
 		  </div>
-  <div id="index" style="background-color: black;">
+	<div id="black" style="background-color: black; position: absolute; top: 0px; bottom: 0px; left: 0px; right 0px; visibility: hidden;"></div>
+  <div id="index">
     <div class="month">      
       <h1>约定</h1>
 	<audio loop controls id="hide">
@@ -132,6 +133,7 @@ body {font-family: Verdana, sans-serif; text-align: center;   background-image:u
 				x.classList.toggle('fadein');
 				y.style.visibility = "hidden";
 				document.getElementById("hide").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "visible";
 			}
       
 			function indexhide() {
@@ -143,6 +145,7 @@ body {font-family: Verdana, sans-serif; text-align: center;   background-image:u
 				x.classList.toggle('fadeout');
 				y.style.visibility = "visible";
 				document.getElementById("hide2").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "hidden";
 			}
   </script>
 </body>
