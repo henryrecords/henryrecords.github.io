@@ -49,7 +49,7 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
 
       <div class="month2">      
       <h1 style="color: white;">约定</h1>
-	<audio loop controls id="show">
+	<audio loop controls id="show" style="visibility: hidden;">
       <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
       </audio>
       </div>
@@ -105,6 +105,12 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
   <br></br>
   </div>
   </div>
+	      <div style="visibility: hide;">      
+      <h1 style="color: white;">约定</h1>
+	<audio loop controls style="visibility: visible">
+      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
+      </audio>
+      </div>
   <script>
     			function indexshow() {
 			var x = document.getElementById("index");
@@ -114,7 +120,6 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
 				x.classList.remove("fadeoutbutton");
 				x.classList.toggle('fadein');
 				y.style.visibility = "hidden";
-				document.getElementById("show").style.visibility = "visible";
 				document.getElementById("hide").style.visibility = "hidden";
 			}
       
@@ -126,6 +131,7 @@ body {font-family: Verdana, sans-serif; text-align: center; background-color:bla
 				x.classList.remove("fadeoutbutton");
 				x.classList.toggle('fadeout');
 				y.style.visibility = "visible";
+				document.getElementById("show").style.visibility = "hidden";
 			}
   </script>
 </body>
