@@ -66,16 +66,8 @@ body {font-family: Verdana, sans-serif; text-align: center;   background-image:u
       <div id="indexshow">
 		  <button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%;">显示歌词</button>
 		  </div>
-	<div id="black" style="background-color: black; position: absolute; top: 0; bottom: 0; left: 0; right: 0; transition: visibility 1s linear; visibility: hidden;"></div>
   <div id="index">
-    <div class="month">      
-      <h1>约定</h1>
-	<audio loop controls id="hide">
-      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
-      </audio>
-    </div>
-    <button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
-  <div style="padding-top: 270px;">
+  <div style="padding-top: 270px; background-color: black; position: absolute; top: 0; bottom: 0; left: 0; right: 0; transition: visibility 1s linear, opacity 1s linear; visibility: hidden; opacity: 0;">
 <p>还记得当天旅馆的门牌</p>
 <p>还留住笑着离开的神态</p>
 <p>当天整个城市 那样轻快</p>
@@ -115,6 +107,13 @@ body {font-family: Verdana, sans-serif; text-align: center;   background-image:u
 <p>两鬓斑白都可认得你</p>
   <br></br>
   </div>
+	    <div class="month">      
+      <h1>约定</h1>
+	<audio loop controls id="hide">
+      <source src="https://henryrecords.github.io/songs/month/oct/music/yueding.mp3" type="audio/ogg">
+      </audio>
+    </div>
+    <button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
   </div>
 	      <div class="month3" style="visibility: hidden;">      
       <h1 style="color: white;">约定</h1>
@@ -133,6 +132,7 @@ body {font-family: Verdana, sans-serif; text-align: center;   background-image:u
 				y.style.visibility = "hidden";
 				document.getElementById("hide").style.visibility = "hidden";
 				document.getElementById("black").style.visibility = "visible";
+				document.getElementById("black").style.opacity = "1";
 			}
       
 			function indexhide() {
@@ -145,6 +145,7 @@ body {font-family: Verdana, sans-serif; text-align: center;   background-image:u
 				y.style.visibility = "visible";
 				document.getElementById("hide2").style.visibility = "hidden";
 				document.getElementById("black").style.visibility = "hidden";
+				document.getElementById("black").style.opacity = "0";
 			}
   </script>
 </body>
