@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rubia</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/rubia-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/rubia.jpg);
+				background-color: white;
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+				}
+			p {
+				color: white;
+			}
+			#index {
+				visibility:hidden;
+				opacity:0;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="month2">      
+			<h1 style="color: white;">Rubia</h1>
+			<audio loop controls id="hide2" style="visibility: hidden;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/ltzz.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="indexshow">
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%;">显示歌词</button>
+		</div>
+		<div id="index">
+			<div id="text" style="overflow-y: scroll; background-image:url(https://henryrecords.github.io/songs/month/oct/picture/black.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<div style="padding-top: 270px; position: absolute; left: 10px; right: 40%">
+					<p>Life blooms like a flower</p>
+					<p>Far away or by the road</p>
+					<p>Waiting for the one</p>
+					<p>To find the way back home</p>
+					<br>
+					<p>Rain falls a thousand times</p>
+					<p>No footprints of come-and-go</p>
+					<p>You who once went by</p>
+					<p>Where will you belong?</p>
+					<br>
+					<p>I feel your sigh and breath</p>
+					<p>In the last blow of wind</p>
+					<p>Not yet for the story on the last page</p>
+					<p>It's not the end</p>
+					<br>
+					<p>Life blooms like a flower</p>
+					<p>Far away or by the road</p>
+					<p>Waiting for the one</p>
+					<p>To find the way back home</p>
+					<br>
+					<p>Time flows across the world</p>
+					<p>There is always a longer way to go</p>
+					<p>Till I reach your arms</p>
+					<p>A madder there for you</p>
+					<br>
+					<p>Up against the stream</p>
+					<p>Waterways will join as one</p>
+					<p>Tracing to the source</p>
+					<p>No more strayed or lost</p>
+					<br>
+					<p>You will see petals fly</p>
+					<p>When lament becomes carol</p>
+					<p>Could you please hear my voice</p>
+					<p>That hungers for a duo?</p>
+					<br>
+					<p>Life blooms like a flower</p>
+					<p>Far away or by the road</p>
+					<p>Waiting for the one</p>
+					<p>To find the way back home</p>
+					<br>
+					<p>Time flows across the world</p>
+					<p>There is always a longer way to go</p>
+					<p>Till I reach your arms</p>
+					<p>A madder there for you</p>
+					<br>
+					<p>Life blooms like a flower</p>
+					<p>Far away or by the road</p>
+					<p>Waiting for the one</p>
+					<p>To find the way back home</p>
+					<br>
+					<p>Time flows across the world</p>
+					<p>There is always a longer way to go</p>
+					<p>Till I reach your arms</p>
+					<p>A madder there for you</p>
+					<br>
+					</br>
+				</div>
+				<div style="padding-top: 270px; position: absolute; right: 10px; left: 40%">
+					<p>生命如花朵绽放</p>
+					<p>或许遥远，或许就在路边</p>
+					<p>等待着那个人</p>
+					<p>找到回归的路</p>
+					<br>
+					<p>雨水数千次的冲刷</p>
+					<p>已经分辨不清来往的脚印</p>
+					<p>曾经过此处的你</p>
+					<p>终将属于哪里</p>
+					<br>
+					<p>我察觉到你的叹息与呼吸</p>
+					<p>在风最后的呼啸之中</p>
+					<p>还未到将故事翻至末页的时候</p>
+					<p>所以一切还未结束</p>
+					<br>
+					<p>生命如花朵绽放</p>
+					<p>或许遥远，或许就在路边</p>
+					<p>等待着那个人</p>
+					<p>找到回归的路</p>
+					<br>
+					<p>时光流淌过天地间</p>
+					<p>我的旅程不会结束</p>
+					<p>直至能与你相拥</p>
+					<p>并献上一株茜草</p>
+					<br>
+					<p>沿着溪流向上</p>
+					<p>无数水流终将合一</p>
+					<p>追溯着源头</p>
+					<p>便可不再迷惘</p>
+					<br>
+					<p>你将看见花瓣纷飞</p>
+					<p>当悲伤之音转而歌颂</p>
+					<p>请你听见我的声音</p>
+					<p>正渴望与你二重唱</p>
+					<br>
+					<p>生命如花朵绽放</p>
+					<p>或许遥远，或许就在路边</p>
+					<p>等待着那个人</p>
+					<p>找到回归的路</p>
+					<br>
+					<p>时光流淌过天地间</p>
+					<p>我的旅程不会结束</p>
+					<p>直至能与你相拥</p>
+					<p>并献上一株茜草</p>
+					<br>
+					<p>生命如花朵绽放</p>
+					<p>或许遥远，或许就在路边</p>
+					<p>等待着那个人</p>
+					<p>找到回归的路</p>
+					<br>
+					<p>时光流淌过天地间</p>
+					<p>我的旅程不会结束</p>
+					<p>直至能与你相拥</p>
+					<p>并献上一株茜草</p>
+					<br>
+					</br>
+				</div>
+			</div>
+			<div class="month">      
+				<h1>Rubia</h1>
+				<audio loop controls id="hide">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/rubia.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
+		</div>
+		<div class="month3" style="visibility: hidden;">      
+			<h1 style="color: white;">Rubia</h1>
+			<audio loop controls id="show" style="visibility: visible;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/rubia.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+				document.getElementById("hide").style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeout');
+				y.style.visibility = "visible";
+				document.getElementById("hide2").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "hidden";
+			}
+		</script>
+	</body>
+</html>
