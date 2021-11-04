@@ -30,7 +30,7 @@
 				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/ltzz.jpg);
 				background-attachment: fixed;
 				background-size: cover;
-				background-color: black;
+				background-color： black; /* opposite to 歌词界面 color */
 			}
 			.month2 {
 				padding: 70px 25px 10px 25px;
@@ -73,7 +73,7 @@
 		<div class="month2">      
 			<h1 style="color: white;">旅の途中</h1>
 			<audio loop controls id="hide2" style="visibility: hidden;">
-				<source src="https://henryrecords.github.io/songs/month/oct/music/ltzz.mp3" type="audio/ogg">
+				<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">显示歌词</button>
 			</audio>
 		</div>
 		<div id="indexshow">
@@ -179,12 +179,12 @@
 				</div>
 			</div>
 			<div class="month">      
-				<h1 style="color: white;">旅の途中</h1>
+				<h1 style="color: white;">旅の途中<!--歌词界面--></h1>
 				<audio loop controls id="hide">
 					<source src="https://henryrecords.github.io/songs/month/oct/music/ltzz.mp3" type="audio/ogg">
 				</audio>
 			</div>
-			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">隐藏歌词</button>
 		</div>
 		<div class="month3" style="visibility: hidden;">      
 			<h1 style="color: white;">旅の途中</h1>
