@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>虹之间</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/hongzhijian-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/hongzhijian.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+				}
+			p {
+				color: white;
+			}
+			#index {
+				visibility:hidden;
+				opacity:0;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="month2">      
+			<h1 style="color: white;">虹之间</h1>
+			<audio loop controls id="hide2" style="visibility: hidden;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/hongzhijian.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="indexshow">
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%;">显示歌词</button>
+		</div>
+		<div id="index">
+			<div id="text" style="overflow-y: scroll; padding-top: 270px; background-image:url(https://henryrecords.github.io/songs/month/oct/picture/white.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<p>想借天使的翅膀 抓住云端的彩虹</p>
+				<p>总在将要触碰时消散</p>
+				<p>错觉的地久天长 其实是一无所有</p>
+				<br>
+				<p>童话说雨后 会有一道彩虹</p>
+				<p>却不曾说过 它也会转瞬成空</p>
+				<p>想要把绚烂 紧紧握在手中</p>
+				<p>忽然发现 你已不见</p>
+				<br>
+				<p>站在无尽红尘中 仰望曾有你的苍穹</p>
+				<p>得到以后转眼又落空</p>
+				<p>究竟什么是永恒 都无法拥有完整</p>
+				<p>Oh my love</p>
+				<br>
+				<p>我看见希望 闪耀彩虹之间</p>
+				<p>光芒凝结与你我的那片天</p>
+				<p>不再追问你为何不能停留</p>
+				<p>微笑看见 爱的浮现</p>
+				<br>
+				<p>雨后的天空中又出现彩虹</p>
+				<p>天使的恩惠亲吻着世间万众</p>
+				<p>不再追问你为何不能停留</p>
+				<p>放下了执念 微笑现在</p>
+				<br>
+				</br>
+			</div>
+			<div class="month">      
+				<h1>虹之间</h1>
+				<audio loop controls id="hide">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/hongzhijian.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
+		</div>
+		<div class="month3" style="visibility: hidden;">      
+			<h1 style="color: white;">虹之间</h1>
+			<audio loop controls id="show" style="visibility: visible;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/hongzhijian.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+				document.getElementById("hide").style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeout');
+				y.style.visibility = "visible";
+				document.getElementById("hide2").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "hidden";
+			}
+		</script>
+	</body>
+</html>

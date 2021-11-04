@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>新贵妃醉酒</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/xgfzj-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/xgfzj.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+				}
+			p {
+				color: white;
+			}
+			#index {
+				visibility:hidden;
+				opacity:0;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="month2">      
+			<h1 style="color: white;">新贵妃醉酒</h1>
+			<audio loop controls id="hide2" style="visibility: hidden;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/xgfzj.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="indexshow">
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%;">显示歌词</button>
+		</div>
+		<div id="index">
+			<div id="text" style="overflow-y: scroll; padding-top: 270px; background-image:url(https://henryrecords.github.io/songs/month/oct/picture/white.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<p>那一年的雪花飘落梅花开枝头</p>
+				<p>那一年的华清池旁留下太多愁</p>
+				<p>不要说谁是谁非感情错与对</p>
+				<p>只想梦里与你一起再醉一回</p>
+				<br>
+				<p>金雀钗玉搔头是你给我的礼物</p>
+				<p>霓裳羽衣曲几番轮回为你歌舞</p>
+				<p>剑门关是你对我深深的思念</p>
+				<p>马嵬坡下愿为真爱魂断红颜</p>
+				<br>
+				<p>爱恨就在一瞬间</p>
+				<p>举杯对月情似天</p>
+				<p>爱恨两茫茫</p>
+				<p>问君何时恋</p>
+				<br>
+				<p>菊花台倒影明月</p>
+				<p>谁知吾爱心中寒</p>
+				<p>醉在君王怀</p>
+				<p>梦回大唐爱</p>
+				<br>
+				<p>金雀钗玉搔头是你给我的礼物</p>
+				<p>霓裳羽衣曲几番轮回为你歌舞</p>
+				<p>剑门关是你对我深深的思念</p>
+				<p>马嵬坡下愿为真爱魂断红颜</p>
+				<br>
+				<p>爱恨就在一瞬间</p>
+				<p>举杯对月情似天</p>
+				<p>爱恨两茫茫</p>
+				<p>问君何时恋</p>
+				<br>
+				<p>菊花台倒影明月</p>
+				<p>谁知吾爱心中寒</p>
+				<p>醉在君王怀</p>
+				<p>梦回大唐爱</p>
+				<br>
+				<p>菊花台倒影明月</p>
+				<p>谁知吾爱心中寒</p>
+				<p>醉在君王怀</p>
+				<p>梦回大唐爱</p>
+				<br>
+				</br>
+			</div>
+			<div class="month">      
+				<h1>新贵妃醉酒</h1>
+				<audio loop controls id="hide">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/xgfzj.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
+		</div>
+		<div class="month3" style="visibility: hidden;">      
+			<h1 style="color: white;">新贵妃醉酒</h1>
+			<audio loop controls id="show" style="visibility: visible;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/xgfzj.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+				document.getElementById("hide").style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeout');
+				y.style.visibility = "visible";
+				document.getElementById("hide2").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "hidden";
+			}
+		</script>
+	</body>
+</html>
