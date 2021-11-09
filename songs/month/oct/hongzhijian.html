@@ -8,7 +8,7 @@
 			}
 			body {
 				font-family: Verdana, sans-serif;
-				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/hongzhijian-b.jpg);
+				text-align: center;   background-color: black;
 				background-attachment: fixed;
 				background-size: cover;
 			}
@@ -30,6 +30,7 @@
 				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/hongzhijian.jpg);
 				background-attachment: fixed;
 				background-size: cover;
+				background-color: black; /* opposite to 歌词界面 color */
 			}
 			.month2 {
 				padding: 70px 25px 10px 25px;
@@ -38,7 +39,7 @@
 				top: 0px;
 				text-align: center;
 				position: fixed;
-				background-color: black;
+				background-color: white;
 			}
 			.month3 {
 				padding: 70px 25px 10px 25px;
@@ -66,17 +67,26 @@
 				visibility:visible;
 				opacity:1; 
 			}
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%); /* IE 9 */
+				-webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */	    
+			}
 		</style>
 	</head>
 	<body>
+		<img src="file:///D:/henryrecords_songs/oct/%E8%99%B9%E4%B9%8B%E9%97%B4/hongzhijian-b.jpg"/>
 		<div class="month2">      
-			<h1 style="color: white;">虹之间</h1>
+			<h1 style="color: black;">虹之间</h1>
 			<audio loop controls id="hide2" style="visibility: hidden;">
 				<source src="https://henryrecords.github.io/songs/month/oct/music/hongzhijian.mp3" type="audio/ogg">
 			</audio>
 		</div>
 		<div id="indexshow">
-			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%;">显示歌词</button>
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">显示歌词</button>
 		</div>
 		<div id="index">
 			<div id="text" style="overflow-y: scroll; padding-top: 270px; background-image:url(https://henryrecords.github.io/songs/month/oct/picture/white.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
@@ -107,12 +117,12 @@
 				</br>
 			</div>
 			<div class="month">      
-				<h1>虹之间</h1>
+				<h1 style="color: white;">虹之间<!--歌词界面--></h1>
 				<audio loop controls id="hide">
 					<source src="https://henryrecords.github.io/songs/month/oct/music/hongzhijian.mp3" type="audio/ogg">
 				</audio>
 			</div>
-			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px;">隐藏歌词</button>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">隐藏歌词</button>
 		</div>
 		<div class="month3" style="visibility: hidden;">      
 			<h1 style="color: white;">虹之间</h1>
