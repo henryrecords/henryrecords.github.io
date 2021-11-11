@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>浮生</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/fusheng-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/fusheng.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+				background-color: black; /* opposite to 歌词界面 color */
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+				}
+			p {
+				color: white;
+			}
+			#index {
+				visibility:hidden;
+				opacity:0;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="month2">      
+			<h1 style="color: white;">浮生</h1>
+			<audio loop controls id="hide2" style="visibility: hidden;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/fusheng.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="indexshow">
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">显示歌词</button>
+		</div>
+		<div id="index">
+			<div id="text" style="overflow-y: scroll; padding-top: 270px; background-image:url(https://henryrecords.github.io/songs/month/oct/picture/black.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<p>凤捎大梦过 拂动耳畔语</p>
+				<p>似你在身侧 轻声呼吸</p>
+				<p>迷途中 沿着流星指引的轨迹</p>
+				<p>探人间 的秘密</p>
+				<br>
+				<p>混沌岁月里 浮云在哭泣</p>
+				<p>倾盆的流连 凝作泪滴</p>
+				<p>眼眶中 倒映一片无垠的天地</p>
+				<p>却遗失 一个你</p>
+				<br>
+				<p>寻找着 追循着 你的痕迹</p>
+				<p>用余生 守护着 回忆</p>
+				<p>每一道 伤痕都 仿若羽翼</p>
+				<p>轻飘向 你背影</p>
+				<br>
+				<p>蛰伏于昼夜 山河在流离</p>
+				<p>思念随四季 轮转不息</p>
+				<p>而宿命 如沙淌过指间的缝隙</p>
+				<p>那羁绊 握不紧</p>
+				<br>
+				<p>寻找着 追循着 你的痕迹</p>
+				<p>用余生守护着回忆</p>
+				<p>每一道 伤痕都 仿若羽翼</p>
+				<p>轻飘向 你背影</p>
+				<br>
+				<p>寻找着 追循着 你的痕迹</p>
+				<p>这余生 你便是意义</p>
+				<p>每一次 停驻都 仿若相遇</p>
+				<p>眼前是 你背影</p>
+				<br>
+				<p>寻找着 追循着 你的痕迹</p>
+				<p>要如何 任往事 执迷</p>
+				<p>曾许下 的誓言 无声扬起</p>
+				<p>又如烟 消散尽</p>
+				<br>
+				<p>想定格 那一瞬 深埋心底</p>
+				<p>你呼唤 我一如 往昔</p>
+				<p>若一切 流浪都 只是伏笔</p>
+				<p>那终点 可是你</p>
+				<br>
+				<p>若结局 已注定 和你别离</p>
+				<p>也不悔 遇见你</p>
+				<p>你是我 的唯一</p>
+				<br>
+				</br>
+			</div>
+			<div class="month">      
+				<h1 style="color: white;">浮生<!--歌词界面--></h1>
+				<audio loop controls id="hide">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/fusheng.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">隐藏歌词</button>
+		</div>
+		<div class="month3" style="visibility: hidden;">      
+			<h1 style="color: white;">浮生</h1>
+			<audio loop controls id="show" style="visibility: visible;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/fusheng.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+				document.getElementById("hide").style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeout');
+				y.style.visibility = "visible";
+				document.getElementById("hide2").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "hidden";
+			}
+		</script>
+	</body>
+</html>
