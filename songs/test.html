@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h2 {
+				opacity: 0;
+				animation-duration: 5s;
+				animation-name: slidein;
+				animation-iteration-count: infinite;
+        animation-direction: alternate;
+				animation-delay: 0s;
+			}
+			@keyframes slidein {
+				from {
+					right: 0px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+      h1 {
+				opacity: 0;
+				animation-duration: 3s;
+				animation-name: fadein;
+				animation-iteration-count: infinite;
+        animation-direction: alternate;
+				animation-delay: 0s;
+			}
+      @keyframes fadein {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+    </style>
+  </head>
+  <body>
+    <h1>李亚伦大SB</h1>
+    <h2>李亚伦大SB</h2>
+  </body>
+</html>
