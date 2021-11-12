@@ -3,10 +3,10 @@
 	<head>
 		<style>
 			h2 {
-				animation-duration: 5s;
-				animation-name: slidein;
-				animation-iteration-count: infinite;
-				animation-direction: alternate;
+				animation-duration: 5s, .5s;
+				animation-name: slidein, fadein;
+				animation-iteration-count: infinite, infinite;
+				animation-direction: alternate, alternate;
 				animation-delay: 0s;
 			}
 			@keyframes slidein {
@@ -20,12 +20,10 @@
 			}
 
 			h1 {
-				opacity: 0;
 				text-align: center;
-				animation-duration: 1s;
-				animation-name: fadein;
+				animation-duration: 3s;
+				animation-name: color;
 				animation-iteration-count: infinite;
-				animation-direction: alternate;
 				animation-delay: 0s;
 			}
       			@keyframes fadein {
@@ -34,6 +32,18 @@
 				}
 				to {
 					opacity: 1;
+				}
+			}
+      			@keyframes color {
+				from {
+					color: black;
+				}
+				20% {color: yellow;}
+				40% {color: blue;}
+				60% {color: red;}
+				80% {color: green;}
+				to {
+					color: black;
 				}
 			}
 			#p1 {
