@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>手写的从前</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/zentan-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/zentan.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+				}
+			p {
+				color: black;
+			}
+			#index {
+				opacity: 0;
+				visibility: hidden;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+  			#indexshow.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#indexshow.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+			@font-face {
+				font-family: xingkai;
+				src: url(https://henryrecords.github.io/songs/month/nov/font/xingkai.woff);
+			}
+			.anime1 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein1;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein1 {
+				from {
+					opacity: 0;
+				}
+				3.697% {
+					opacity: 0;
+				}
+				5.0403% {
+					opacity: 1;
+				}
+				15.2% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime2 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein2;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein2 {
+				from {
+					opacity: 0;
+				}
+				5.37715% {
+					opacity: 0;
+				}
+				6.922% {
+					opacity: 1;
+				}
+				15.5% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime3 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein3;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein3 {
+				from {
+					opacity: 0;
+				}
+				7.158% {
+					opacity: 0;
+				}
+				8.501344% {
+					opacity: 1;
+				}
+				15.8% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime4 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein4;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein4 {
+				from {
+					opacity: 0;
+				}
+				8.50215% {
+					opacity: 0;
+				}
+				10.282258% {
+					opacity: 1;
+				}
+				16.1% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime5 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein5;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein5 {
+				from {
+					opacity: 0;
+				}
+				10.518279% {
+					opacity: 0;
+				}
+				11.861559% {
+					opacity: 1;
+				}
+				16.4% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime6 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein6;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein6 {
+				from {
+					opacity: 0;
+				}
+				12.09758% {
+					opacity: 0;
+				}
+				13.1048% {
+					opacity: 1;
+				}
+				16.7% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime7 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein7;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein7 {
+				from {
+					opacity: 0;
+				}
+				13.105645% {
+					opacity: 0;
+				}
+				14.784946% {
+					opacity: 1;
+				}
+				17.0% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime8 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein8;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein8 {
+				from {
+					opacity: 0;
+				}
+				14.886559% {
+					opacity: 0;
+				}
+				15.793% {
+					opacity: 1;
+				}
+				17.3% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime9 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein9;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein9 {
+				from {
+					opacity: 0;
+				}
+				16.2306% {
+					opacity: 0;
+				}
+				17.5739% {
+					opacity: 1;
+				}
+				17.6% {
+					opacity: 1;
+				}
+				17.8% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+			.anime10 {
+				opacity: 0;
+				animation-duration: 297.6s;
+				animation-name: fadein10;
+				animation-iteration-count: infinite;
+				animation-delay: 0s;
+			}
+
+			@keyframes fadein10 {
+				from {
+					opacity: 0;
+				}
+				17.7091397% {
+					opacity: 0;
+				}
+				19.254032258% {
+					opacity: 1;
+				}
+
+				to {
+					opacity: 0;
+				}
+			}
+			.pause {
+				animation-play-state: paused;
+			}
+			td {
+				font-family: xingkai;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="indexshow">
+			<div id="text" style="overflow-y: scroll; padding-top: 270px; background-image: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0)); font-family: xingkai; background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<p>这风铃跟心动很接近</p>
+				<p>这封信还在怀念旅行</p>
+				<p>路过的爱情都太年轻</p>
+				<p>你是我想要再回去的风景</p>
+				<br>
+				<p>这别离被瓶装成秘密</p>
+				<p>这雏菊美得像诗句</p>
+				<p>而我在风中等你的消息</p>
+				<p>等月光落雪地</p>
+				<p>等枫红染秋季等相遇</p>
+				<br>
+				<p>我重温午后的阳光</p>
+				<p>将吉他斜背在肩上</p>
+				<p>跟多年前一样 我们轻轻地唱</p>
+				<p>去任何地方</p>
+				<br>
+				<p>我看着你的脸 轻刷着和弦</p>
+				<p>情人节卡片 手写的永远</p>
+				<p>还记得广场公园 一起表演</p>
+				<p>校园旁糖果店 记忆里在微甜</p>
+				<br>
+				<p>我看着你的脸 轻刷着和弦</p>
+				<p>初恋是整遍 手写的从前</p>
+				<p>还记得那年秋天 说了再见</p>
+				<p>当恋情已走远</p>
+				<p>我将你深埋在 心里面</p>
+				<br>
+				<p>微风需要竹林 溪流需要蜻蜓</p>
+				<p>乡愁般的离开 需要片片浮萍</p>
+				<p>记得那年的雨季 回忆里特安静</p>
+				<p>哭过后的决定 是否还能进行</p>
+				<p>我傻傻等待 傻傻等春暖花开</p>
+				<p>等终等于等明等白 等爱情回来</p>
+				<p>青春属于表白 阳光属于窗台</p>
+				<p>而我想我属于</p>
+				<p>一个拥有你的未来</p>
+				<br>
+				<p>纸上的彩虹 用素描画的钟</p>
+				<p>我还在修改 回忆之中你的笑容</p>
+				<p>该怎么去形容 为思念酝酿的痛</p>
+				<p>夜空霓虹 都是我不要的繁荣</p>
+				<p>或许去趟沙滩 或许去看看夕阳</p>
+				<p>或许任何一个可以想心事的地方</p>
+				<p>情绪在咖啡馆 被调成一篇文章</p>
+				<p>彻底爱上你如诗一般透明的泪光</p>
+				<br>
+				<p>我看着你的脸 轻刷着和弦</p>
+				<p>情人节卡片 手写的永远</p>
+				<p>还记得广场公园 一起表演</p>
+				<p>校园旁糖果店 记忆里在微甜</p>
+				<br>
+				<p>我看着你的脸 轻刷着和弦</p>
+				<p>初恋是整遍 手写的从前</p>
+				<p>还记得那年秋天 说了再见</p>
+				<p>当恋情已走远</p>
+				<p>我将你深埋在 心里面</p>
+				<br>
+				<p>我重温午后的阳光</p>
+				<p>将吉他斜背在肩上</p>
+				<p>跟多年前一样 我们轻轻地唱</p>
+				<p>去任何地方</p>
+				<br>
+				<p>我看着你的脸 轻刷着和弦</p>
+				<p>情人节卡片 手写的永远</p>
+				<p>还记得广场公园 一起表演</p>
+				<p>校园旁糖果店 记忆里在微甜</p>
+				<br>
+				<p>我看着你的脸 轻刷着和弦</p>
+				<p>初恋是整遍 手写的从前</p>
+				<p>还记得那年秋天 说了再见</p>
+				<p>当恋情已走远</p>
+				<p>我将你深埋在 心里面</p>
+				<br>
+				</br>
+			</div>
+			<div class="month2">      
+				<h1 style="color: white;">手写的从前</h1>
+				<audio loop controls id="hide2" style="visibility: hidden;">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/zentan.mp3" type="audio/ogg">
+				</audio>
+			</div>
+		</div>
+		<div id="index">
+
+
+
+
+			<div style="padding-top: 270px; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; background-color: white;">
+				<table style="width: 100%;">
+					<tr>
+						<td id="terminal1" style="font-size: 40px; text-align: center; padding-top: 20px;">这风铃跟心动很接近</td>
+						<td id="terminal5" style="font-size: 40px; text-align: center; padding-top: 20px;">这别离被瓶装成秘密</td>
+					</tr>
+					<tr>
+						<td id="terminal2" style="font-size: 40px; text-align: center; padding-top: 20px;">这封信还在怀念旅行</td>
+						<td id="terminal6" style="font-size: 40px; text-align: center; padding-top: 20px;">这雏菊美得像诗句</td>
+					</tr>
+					<tr>
+						<td id="terminal3" style="font-size: 40px; text-align: center; padding-top: 20px;">路过的爱情都太年轻</td>
+						<td id="terminal7" style="font-size: 40px; text-align: center; padding-top: 20px;">而我在风中等你的消息</td>
+					</tr>
+					<tr>
+						<td id="terminal4" style="font-size: 40px; text-align: center; padding-top: 20px;">你是我想要再回去的风景</td>
+						<td id="terminal8" style="font-size: 40px; text-align: center; padding-top: 20px;">等月光落雪地</td>
+					</tr>
+					<tr>
+						<td id="terminal9" style="font-size: 40px; text-align: center; padding-top: 20px;">等枫红染秋季等相遇</td>
+					</tr>
+				</table>
+			</div>
+			<div id="board2" style="padding-top: 270px; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; background-color: white; opacity： 0;">
+				<table style="width: 100%;">
+					<tr>
+						<td id="terminal10" style="font-size: 60px; text-align: center; padding-top:;">我重温午后的阳光</td>
+					</tr>
+				</table>
+			</div>
+
+
+
+			<div class="month">      
+				<h1 style="color: white;">手写的从前<!--歌词界面--></h1>
+				<audio loop controls id="hide">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/zentan.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button id="rightbutton" onclick="pause();" style="position: fixed; right:0px; bottom: 0px; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">音乐暂停</button>
+		</div>
+		<div class="month3" style="visibility: hidden;">      
+			<h1 style="color: white;">手写的从前</h1>
+			<audio id="audio" loop controls id="show" style="visibility: visible;">
+				<source src="https://henryrecords.github.io/songs/month/nov/music/sxdcq.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<button id="leftbutton" onclick="dongtai(); playAudio();" style="position: fixed; bottom: 0%; left: 0%; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">动态歌词</button>
+		<script>
+
+			function dongtai() {
+				if (document.getElementById("leftbutton").innerHTML === "动态歌词") {
+					document.getElementById("leftbutton").innerHTML = '回到主页';
+					var x = document.getElementById("index");
+					var y = document.getElementById("indexshow");
+					x.classList.remove("fadein");
+					x.classList.remove("fadeout");
+					x.classList.toggle('fadein');
+					y.classList.remove("fadein");
+					y.classList.remove("fadeout");
+					y.classList.toggle('fadeout');
+					document.getElementById("hide").style.visibility = "hidden";
+					document.getElementById("audio").play();
+					document.getElementById("terminal1").classList.add("anime1");
+					document.getElementById("terminal2").classList.add("anime2");
+					document.getElementById("terminal3").classList.add("anime3");
+					document.getElementById("terminal4").classList.add("anime4");
+					document.getElementById("terminal5").classList.add("anime5");
+					document.getElementById("terminal6").classList.add("anime6");
+					document.getElementById("terminal7").classList.add("anime7");
+					document.getElementById("terminal8").classList.add("anime8");
+					document.getElementById("terminal9").classList.add("anime9");
+					document.getElementById("terminal10").classList.add("anime10");
+					document.getElementById("board2").classList.add("anime10");
+				}
+				else {
+					document.getElementById("leftbutton").innerHTML = '动态歌词';
+					var x = document.getElementById("index");
+					var y = document.getElementById("indexshow");
+					document.getElementById("audio").pause();
+					document.getElementById("audio").currentTime = 0;
+					x.classList.remove("fadein");
+					x.classList.remove("fadeout");
+					x.classList.toggle('fadeout');
+					y.classList.remove("fadein");
+					y.classList.remove("fadeout");
+					y.classList.toggle('fadein');
+					document.getElementById("hide2").style.visibility = "hidden";
+					document.getElementById("black").style.visibility = "hidden";
+				}
+			}
+			function pause() {
+				var x = document.getElementById("audio"); 
+				if (document.getElementById("rightbutton").innerHTML === "音乐暂停") {
+					document.getElementById("rightbutton").innerHTML = '音乐开始';
+					x.pause(); 
+				}
+				else {
+					document.getElementById("rightbutton").innerHTML = '音乐暂停';
+					x.play();
+				}
+			}
+function pause() {
+	if (document.getElementById("pausebutton").innerHTML === "pause") {
+		document.getElementById("pausebutton").innerHTML = 'start';
+		document.getElementById("indexshow").classList.add("pause");
+	}
+	else {
+		document.getElementById("pausebutton").innerHTML = 'pause';
+		document.getElementById("indexshow").classList.remove("pause");
+	}
+}
+		</script>
+	</body>
+</html>
