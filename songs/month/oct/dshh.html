@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>打ち上げ花火</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/dshh-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/dshh.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+				background-color: white; /* opposite to 歌词界面 color */
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.black {
+				color: white;
+			}
+			.grey {
+				color: grey;
+			}
+			#index {
+				visibility:hidden;
+				opacity:0;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="month2">      
+			<h1 style="color: white;">打ち上げ花火</h1>
+			<audio loop controls id="hide2" style="visibility: hidden;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/dshh.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="indexshow">
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">显示歌词</button>
+		</div>
+		<div id="index">
+			<div id="text" style="overflow-y: scroll; background-image:url(https://henryrecords.github.io/songs/month/oct/picture/black.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<div style="padding-top: 270px; position: absolute; left: 0px; right: 0px">
+					<p class="black">あの日見渡した渚を 今も思い出すんだ</p>
+					<p class="black">砂の上に刻んだ言葉 君の後ろ姿</p>
+					<br>
+					<p class="black">寄り返す波が足元をよぎり 何かを攫う</p>
+					<p class="black">夕凪の中 日暮れだけが通り過ぎて行く</p>
+					<br>
+					<p class="black">パッと光って咲いた 花火を見てた</p>
+					<p class="black">きっとまだ 終わらない夏が</p>
+					<p class="black">曖昧な心を 解かして繋いだ</p>
+					<p class="black">この夜が続いて欲しかった</p>
+					<br>
+					<p class="black">「あと何度君と同じ花火を見られるかな」って</p>
+					<p class="black">笑う顔に何ができるだろうか</p>
+					<p class="black">傷つくこと 喜ぶこと 繰り返す波と情動</p>
+					<p class="black">焦燥 最終列車の音</p>
+					<br>
+					<p class="black">何度でも言葉にして 君を呼ぶよ</p>
+					<p class="black">波間を選び もう一度</p>
+					<p class="black">もう二度と悲しまずに済むように</p>
+					<br>
+					<p class="black">はっと息を飲めば 消えちゃいそうな光が</p>
+					<p class="black">きっとまだ胸に住んでいた</p>
+					<p class="black">手を伸ばせば触れた あったかい未来は</p>
+					<p class="black">ひそかに二人を見ていた</p>
+					<br>
+					<p class="black">パッと花火が <span class="grey">パッと花火が</span></p>
+					<p class="black">夜に咲いた <span class="grey">夜に咲いた</span></p>
+					<p class="black">夜に咲いて <span class="grey">夜に咲いて</span></p>
+					<p class="black">静かに消えた <span class="grey">静かに消えた</span></p>
+					<p class="black">離さないで <span class="grey">離れないで</span></p>
+					<p class="black">もう少しだけ <span class="grey">もう少しだけ</span></p>
+					<p class="black">もう少しだけ このままで</p>
+					<br>
+					<p class="black">あの日見渡した渚を 今も思い出すんだ</p>
+					<p class="black">砂の上に刻んだ言葉 君の後ろ姿</p>
+					<br>
+					<p class="black">パッと光って咲いた 花火を見てた</p>
+					<p class="black">きっとまだ 終わらない夏が</p>
+					<p class="black">曖昧な心を 解かして繋いだ</p>
+					<p class="black">この夜が続いて欲しかった</p>
+					<br>
+					</br>
+				</div>
+				<div style="padding-top: 270px; position: absolute; right: 10px; left: 40%">
+
+					<br>
+					</br>
+				</div>
+			</div>
+			<div class="month">      
+				<h1 style="color: black;">打ち上げ花火<!--歌词界面--></h1>
+				<audio loop controls id="hide">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/dshh.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">隐藏歌词</button>
+		</div>
+		<div class="month3" style="visibility: hidden;">      
+			<h1 style="color: white;">打ち上げ花火</h1>
+			<audio loop controls id="show" style="visibility: visible;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/dshh.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+				document.getElementById("hide").style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeout');
+				y.style.visibility = "visible";
+				document.getElementById("hide2").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "hidden";
+			}
+		</script>
+	</body>
+</html>
