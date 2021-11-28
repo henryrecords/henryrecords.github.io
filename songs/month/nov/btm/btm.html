@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Beyond the Memory</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/btm-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/btm.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+				background-color: black; /* opposite to 歌词界面 color */
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+				}
+			p {
+				color: black;
+				font-size: 25px;
+			}
+			#index {
+				visibility:hidden;
+				opacity:0;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="month2">      
+			<h1 style="color: white;">Beyond the Memory</h1>
+			<audio loop controls id="btm">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/btm/btm.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="indexshow">
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">显示歌词</button>
+		</div>
+		<div id="index">
+			<div id="text" style="overflow-y: scroll; padding-top: 270px; background-image:url(https://henryrecords.github.io/years/2019/literature/parchment.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<p>ダーリンのこと 大好きだよ</p>
+				<p>仆とずっと一绪にいようね</p>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>これからずっと爱してるよ</p>
+				<br>
+				<p>ねーダーリンがんばりましたか</p>
+				<p>ご饭の前に散歩はどうだい</p>
+				<p>ん?この花 桜と呼んだ？</p>
+				<p>ねー将来どんなに咲くの？</p>
+				<br>
+				<p>ん はい仆のかみのように きれいになる？</p>
+				<p>エヘヘ 楽しみ</p>
+				<p>ねーダーリン 一绪に见よ</p>
+				<p>はい ダーリン约束だよ</p>
+				<br>
+				<p>エヘヘ この絵本 覚えてる</p>
+				<p>子供の顷一绪に読んだ</p>
+				<p>あの时から 人间になりたい</p>
+				<p>君と会いたい そばに行きたい</p>
+				<br>
+				<p>君の言叶 覚えてる？</p>
+				<p>守りたいって そういった</p>
+				<p>子供のくせに 変だよね</p>
+				<p>でもでもね 忘れないよ</p>
+				<br>
+				<p>ダーリンの侧に戻っていい？</p>
+				<p>だって仆は化け物なの</p>
+				<p>人间じゃなくて 仆といると</p>
+				<p>おかしくなる 危険だぞ</p>
+				<br>
+				<p>本当にいいの？ありがとう</p>
+				<p>外に行きたい 一绪に见よ</p>
+				<p>この世界はきれいだぞ</p>
+				<p>大きいんだぞ 広いだぞ</p>
+				<br>
+				<p>结婚式で开けるのかい？</p>
+				<p>これからずっと爱してるよ</p>
+				<p>君にあけよ この一生</p>
+				<p>はいよろしくお愿いします</p>
+				<br>
+				<p>みんな？祝回きた？</p>
+				<p>んエヘヘ ありがとう</p>
+				<p>もらったコインが多ければ</p>
+				<p>はい仆はもっと幸せだよ</p>
+				<br>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>比翼の鸟になりたいよ</p>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>この絵本また読みましょう</p>
+				<br>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>その约束必ず守る</p>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>花の冠きれいですか？</p>
+				<br>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>君の映画下手ですね</p>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>でも仆が 爱してるよ</p>
+				<br>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>もともとキスしたい</p>
+				<p>ダーリンのこと大好きだよ</p>
+				<p>仆にとって唯一だね</p>
+				<br>
+				<p>ねーダーリン 知てる？</p>
+				<p>新しい絵本 すぐに完成</p>
+				<p>収集して一绪に読もう</p>
+				<p>仆のすべて 君のだよ</p>
+				<br>
+				</br>
+			</div>
+			<div class="month">      
+				<h1 style="color: white;">零二的爱恋<!--歌词界面--></h1>
+				<audio loop controls id="02dal">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/btm/02dal.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">隐藏歌词</button>
+		</div>
+		<script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+				document.getElementById("btm").pause();
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeout');
+				y.style.visibility = "visible";
+				document.getElementById("black").style.visibility = "hidden";
+				document.getElementById("02dal").pause();
+			}
+		</script>
+	</body>
+</html>
