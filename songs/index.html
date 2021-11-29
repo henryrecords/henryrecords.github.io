@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="icon" href="https://henryrecords.github.io/songs/nwei.png" type="image/icon type">
+	<title>主页</title>
+	<link href="https://henryrecords.github.io/songs/mainicon.png" rel="shortcut icon" type="image/x-icon" />
 		<style>
+			body {
+				text-align: center;
+			}
 			input {
 				width: 50%;
 				box-sizing: border-box;
@@ -11,7 +15,7 @@
 				font-size: 16px;
 				background-size: 22px;
 				background-color: white;
-				background-image: url('https://henryrecords.github.io/songs/nwei.png');
+				background-image: url('https://henryrecords.github.io/songs/mainicon.png');
 				background-position: 10px 10px; 
 				background-repeat: no-repeat;
 				padding: 12px 20px 12px 40px;
@@ -25,10 +29,18 @@
 			input:focus {
 				border: 3px solid #555;
 			}
+			.data {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
-		<input placeholder="日期搜索..." list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
+		<input placeholder="内容搜索..." list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
 		<datalist id="select">
 			<option>Calendar</option>
 			<option>Version History</option>
@@ -58,6 +70,9 @@
 				}
 				else if (password == "Version History") {
              				window.open("https://henryrecords.github.io/songs/updated.html");
+				}
+				else if (password == "红日") {
+             				document.getElementById('search').value = '李克勤 2021-10-12';
 				}
 			}
 		</script>
