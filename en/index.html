@@ -1,8 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <h1 style="position: absolute; top: 40%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); visibility: visible;">Coming Soon...</h1>
-  </body>
+	<head>
+	<title>Home</title>
+	<link href="https://henryrecords.github.io/songs/mainicon.png" rel="shortcut icon" type="image/x-icon"/>
+		<style>
+			body {
+				text-align: center;
+			}
+			input {
+				width: 50%;
+				box-sizing: border-box;
+				border: 2px solid #ccc;
+				border-radius: 4px;
+				font-size: 16px;
+				background-size: 22px;
+				background-color: white;
+				background-image: url('https://henryrecords.github.io/songs/mainicon.png');
+				background-position: 10px 10px; 
+				background-repeat: no-repeat;
+				padding: 12px 20px 12px 40px;
+				max-height: 100%;
+				position: absolute;
+				top: 40%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			input:focus {
+				border: 3px solid #555;
+			}
+			.data {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				display: none;
+			}
+			#index {
+        			background-attachment: fixed;
+        			background-size: cover;
+        			background-color: white;
+        			position: absolute;
+        			bottom: 0;
+        			right: 0;
+        			left: 0;
+        			top: 0;
+				visibility: hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, 2s opacity 1s linear;
+				visibility: visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<input placeholder="Search..." list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
+		<datalist id="select">
+			<option>Version History</option>
+			<option>Music Calendar</option>
+			<option>Playlist OCT</option>
+			<option>Playlist NOV</option>
+		</datalist>
+		<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
+			<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
+				<p style="font-size: 20px;"><strong>H</strong>enry<strong>R</strong>ecords</p>
+				<p>.github.io</p>
+			</div>
+		</div>
+		<div style="position: fixed; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
+			<div id="footright" style="line-height: 1%; text-align: center; color: white;">
+				<p style="font-size: 20px;"><strong>NW</strong>EI</p>
+				<p>.github.io</p>
+			</div>
+		</div>
+		<div style="position: fixed; padding: 0px 0px 0px 0px; right: 30%; bottom: 0px; left: 30%; background-color: black;">
+			<div id="footright" style="line-height: 1%; text-align: center; color: white;">
+				<img src="https://henryrecords.github.io/songs/mainlogo.png" style="width: 75px;"/>
+			</div>
+		</div>
+		<div id="index"></div>
+		<script>
+			function search() {
+				var password = document.getElementById("search").value;
+				if (password == "Version History") {
+             				window.open("https://henryrecords.github.io/en/songs/updated.html");
+				}
+				else if (password == "Music Calendar") {
+             				window.open("https://henryrecords.github.io/songs/month/oct/");
+				}
+				else if (password == "Playlist OCT") {
+             				window.open("https://henryrecords.github.io/songs/month/oct/playlist.html");
+				}
+				else if (password == "Playlist NOV") {
+             				window.open("https://henryrecords.github.io/songs/month/nov/playlist.html");
+				}
+				else if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
+             				document.getElementById('search').value = "I'm fine, thank you. And you?";
+				}
+				else if ((password == "what's the date") || (password == "What's the date") || (password == "what's the date?") || (password == "What's the date?")) {
+             				document.getElementById('search').value = "Dec-06, 2021";
+				}
+				else if ((password == "what's your name") || (password == "What's your name") || (password == "what's your name?") || (password == "What's your name?")) {
+             				document.getElementById('search').value = "I don't even know by myself...";
+				}
+				else if ((password == "see you") || (password == "See you") || (password == "see you.") || (password == "See you.")) {
+             				document.getElementById('search').value = "Bye...";
+					document.getElementById('index').classList.toggle('fadein');
+					
+				}
+			}
+		</script>
+	</body>
 </html>
