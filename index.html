@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<title>主页</title>
-	<link href="https://henryrecords.github.io/songs/mainicon.png" rel="shortcut icon" type="image/x-icon" />
+	<link href="https://henryrecords.github.io/songs/mainicon.png" rel="shortcut icon" type="image/x-icon"/>
 		<style>
 			body {
 				text-align: center;
@@ -42,22 +42,24 @@
 	<body>
 		<input placeholder="内容搜索..." list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
 		<datalist id="select">
-			<option>Calendar</option>
-			<option>Version History</option>
+			<option>十月日历</option>
+			<option>十月歌单</option>
+			<option>版本介绍</option>
+			<option>English</option>
 		</datalist>
-		<div style="position: absolute; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
+		<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
 			<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
 				<p style="font-size: 20px;"><strong>H</strong>enry<strong>R</strong>ecords</p>
 				<p>.github.io</p>
 			</div>
 		</div>
-		<div style="position: absolute; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
+		<div style="position: fixed; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
 			<div id="footright" style="line-height: 1%; text-align: center; color: white;">
 				<p style="font-size: 20px;"><strong>NW</strong>EI</p>
 				<p>.github.io</p>
 			</div>
 		</div>
-		<div style="position: absolute; padding: 0px 0px 0px 0px; right: 30%; bottom: 0px; left: 30%; background-color: black;">
+		<div style="position: fixed; padding: 0px 0px 0px 0px; right: 30%; bottom: 0px; left: 30%; background-color: black;">
 			<div id="footright" style="line-height: 1%; text-align: center; color: white;">
 				<img src="https://henryrecords.github.io/songs/mainlogo.png" style="width: 75px;"/>
 			</div>
@@ -65,11 +67,17 @@
 		<script>
 			function search() {
 				var password = document.getElementById("search").value;
-				if (password == "Calendar") {
+				if (password == "十月日历") {
              				window.open("https://henryrecords.github.io/songs/month/oct/");
 				}
-				else if (password == "Version History") {
+				else if (password == "十月歌单") {
+             				window.open("https://henryrecords.github.io/songs/month/oct/playlist.html");
+				}
+				else if (password == "版本介绍") {
              				window.open("https://henryrecords.github.io/songs/updated.html");
+				}
+				else if ((password == "English") || (password == "english")) {
+             				window.open("https://henryrecords.github.io/en.html");
 				}
 				else if (password == "红日") {
              				document.getElementById('search').value = '李克勤 2021-10-12';
