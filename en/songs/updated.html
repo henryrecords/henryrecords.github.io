@@ -22,6 +22,12 @@
 			}
 			body {
 				background-color: black;
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			body::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
 			}
 			.dark {
 				animation-duration: 6.5s;
@@ -803,6 +809,12 @@
 			<p class="dark">Created playlist template</p>
 			<p class="dark">Created playlist for OCT2021</p>
 			<p>Completed: Nov 16, 2021</p>
+			<br>
+			<h3>Local Version 1.2</h3>
+			<p>Started: Nov 28, 2021</p>
+			<p class="dark">Modified home page</p>
+			<p class="dark">Modified music calendar template</p>
+			<p>Completed: Nov 28, 2021</p>
 		</div>
 		<div style="position: absolute; left: 35%; right: 35%; padding: 0px 0px 75px 0px;">
 			<h3>Testing Project One</h3>
