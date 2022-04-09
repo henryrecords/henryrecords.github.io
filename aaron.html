@@ -1,0 +1,167 @@
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lab Report 1 | cse15l-lab-reports</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Lab Report 1" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://aaron8004963.github.io/cse15l-lab-reports/lab-report-1-week-2.html" />
+<meta property="og:url" content="https://aaron8004963.github.io/cse15l-lab-reports/lab-report-1-week-2.html" />
+<meta property="og:site_name" content="cse15l-lab-reports" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lab Report 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Lab Report 1","url":"https://aaron8004963.github.io/cse15l-lab-reports/lab-report-1-week-2.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/cse15l-lab-reports/assets/css/style.css?v=d921e2809f898bc59a99c04acb055dbcb3caf887">
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <script src="/cse15l-lab-reports/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/cse15l-lab-reports/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Lab Report 1</h1>
+        <p></p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/aaron8004963/cse15l-lab-reports" class="button fork"><strong>View On GitHub</strong></a>
+        
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1 id="lab-report-1">Lab Report 1</h1>
+<blockquote>
+  <p>Tutorial of how to log into a course-specific account on ieng6</p>
+</blockquote>
+
+<h2 id="first-step-installing-vscode">First step: Installing VScode</h2>
+<ul>
+  <li>VS code is a useful tool that we can use  terminal or modify files by coding on it.
+    <ol>
+      <li>search VS code in google, then click the <em>download</em> button;</li>
+      <li>download the version you need.(windows, linux, Mac)</li>
+      <li>Once you done, it should be look like the image below:</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="report1Image\vsCodeDownload.png" alt="Image" /></p>
+
+<h2 id="second-step-remotely-connecting">Second step: Remotely Connecting</h2>
+<ul>
+  <li>There are diferent course-specific accounts for different courses.In order to connect our computer with the remote computer over the internet (or connect to the “server”), we need to use a program called openSSH.
+    <ol>
+      <li>Download OpenSSH from google.</li>
+      <li>Find our specific user name for the specific course.</li>
+      <li>Before we start, remember to reset our password for the course; then, in terminal, use <code class="language-plaintext highlighter-rouge">ssh cs15lsp22zz@ieng6.ucsd.edu</code>(replace zz with specific username) and password to connect. once we done, it should be like:</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="report1Image\Remotely-Connecting.png" alt="Image" /></p>
+
+<h2 id="third-step-trying-some-commands">Third step: Trying Some Commands</h2>
+<ul>
+  <li>There are diferent ssh commands we can use to access firectories or files.
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">cd ~</code>: go to the first folder in path</li>
+      <li><code class="language-plaintext highlighter-rouge">cd path</code> go to a specific folder in this folder</li>
+      <li><code class="language-plaintext highlighter-rouge">ls</code> list all folder&amp;file in this folder</li>
+      <li><code class="language-plaintext highlighter-rouge">ls -a</code> list files include the hidden file</li>
+      <li><code class="language-plaintext highlighter-rouge">cp path</code> copy</li>
+      <li><code class="language-plaintext highlighter-rouge">cat path</code> show contents</li>
+    </ol>
+  </li>
+</ul>
+
+<p>Example of command: ls</p>
+
+<p><img src="report1Image\Remotely-Connecting.png" alt="Image" /></p>
+
+<h2 id="third-step-moving-files-with-scp">Forth step: Moving Files with scp</h2>
+<ul>
+  <li>By using scp, we can copy files from our computer to server
+    <ol>
+      <li>Create a file .java in our local machine</li>
+      <li>then use <code class="language-plaintext highlighter-rouge">scp fileName cs15lsp22zz@ieng6.ucsd.edu:~/</code> , replace zz with our user name</li>
+      <li>login to server, we can run this file with javac and java</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="report1Image\Moving_Files_with_scp.png" alt="Image" /></p>
+
+<h2 id="fifth-step-setting-an-ssh-key">Fifth step: Setting an SSH Key</h2>
+<ul>
+  <li>It is unconvenient to login with typing our password everytime; but we can use <code class="language-plaintext highlighter-rouge">ssh-keygen</code> to login without our password safely.
+    <ol>
+      <li>input <code class="language-plaintext highlighter-rouge">ssh-keygen</code> in terminal, and keep clicking ‘enter’ on keyboard.</li>
+      <li>if you are windows: <code class="language-plaintext highlighter-rouge">Get-Service ssh-agent | Set-Service -StartupType Manual</code></li>
+    </ol>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Start-Service ssh-agent</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Get-Service ssh-agent</code></li>
+      <li><code class="language-plaintext highlighter-rouge">ssh-add zz\.ssh\id_ed25519</code> (find ssh path and replace zz with it)
+        <ol>
+          <li>go back to server:input <code class="language-plaintext highlighter-rouge">mkdir .ssh</code> then logout</li>
+          <li>in your computer: <code class="language-plaintext highlighter-rouge">scp /Users/&lt;user-name&gt;/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys</code> replace username</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="report1Image\Setting_an_SSH_Key.png" alt="Image" /></p>
+
+<h2 id="sixth-step-optimizing-remote-running">Sixth step: Optimizing Remote Running</h2>
+<ul>
+  <li>We can use some sort of “shortcut” to make remote running even more pleasant
+    <ol>
+      <li>ssh cs15lsp22akt@ieng6.ucsd.edu “ls”</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="report1Image\multipleCommands.png" alt="Image" /></p>
+
+
+      </section>
+      <footer>
+        
+          <p>Project maintained by <a href="https://github.com/aaron8004963">aaron8004963</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+  </body>
+</html>
