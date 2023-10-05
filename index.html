@@ -43,6 +43,7 @@
 		<input placeholder="内容搜索..." list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
 		<datalist id="select">
 			<option>版本介绍</option>
+			<option>日记</option>
 			<option>十月日历</option>
 			<option>十月歌单</option>
 			<option>十一月歌单</option>
@@ -72,6 +73,9 @@
 				}
 				else if (password == "十月歌单") {
              				window.open("https://henryrecords.github.io/songs/month/oct/playlist.html");
+				}
+				else if (password == "日记") {
+					window.open("https://henryrecords.github.io/dairy/index.html")
 				}
 				else if (password == "十一月歌单") {
              				window.open("https://henryrecords.github.io/songs/month/nov/playlist.html");
