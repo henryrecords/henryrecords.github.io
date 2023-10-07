@@ -40,7 +40,7 @@
 		</style>
 	</head>
 	<body>
-		<input placeholder="内容搜索..." list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
+		<input placeholder="^...^" list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
 		<datalist id="select">
 			<option>概要</option>
 			<option>日记</option>
@@ -72,38 +72,35 @@
 		<script>
 			function search() {
 				var password = document.getElementById("search").value;
-				if (password == "") {
-             				window.open("https://henryrecords.github.io/songs/month/oct/");
-				}
-				else if (password == "十月歌单") {
-             				window.open("https://henryrecords.github.io/songs/month/oct/playlist.html");
+				if (password == "概要") {
+             				window.open("https://henryrecords.github.io/");
 				}
 				else if (password == "日记") {
-					window.open("https://henryrecords.github.io/dairy/index.html")
+             				window.open("https://henryrecords.github.io/");
 				}
-				else if (password == "十一月歌单") {
-             				window.open("https://henryrecords.github.io/songs/month/nov/playlist.html");
+				else if (password == "日程") {
+					window.open("https://henryrecords.github.io/");
 				}
-				else if (password == "版本介绍") {
-             				window.open("https://henryrecords.github.io/songs/updated.html");
+				else if (password == "记事") {
+					window.open("https://henryrecords.github.io/");
 				}
-				else if ((password == "English") || (password == "english")) {
-             				window.open("https://henryrecords.github.io/en/");
+				else if (password == "文学") {
+             				window.open("https://henryrecords.github.io/");
 				}
-				else if (password == "红日") {
-             				document.getElementById('search').value = "李克勤 2021-10-12";
+				else if (password == "音乐") {
+             				window.open("https://henryrecords.github.io/");
 				}
-				else if (password == "Version History") {
-             				window.open("https://henryrecords.github.io/en/songs/updated.html");
+				else if (password == "学术") {
+             				window.open("https://henryrecords.github.io/");
 				}
-				else if (password == "Music Calendar") {
-             				window.open("https://henryrecords.github.io/songs/month/oct/");
+				else if (password == "外交") {
+             				window.open("https://henryrecords.github.io/");
 				}
-				else if (password == "Playlist OCT") {
-             				window.open("https://henryrecords.github.io/songs/month/oct/playlist.html");
+				else if (password == "财务") {
+             				window.open("https://henryrecords.github.io/");
 				}
-				else if (password == "Playlist NOV") {
-             				window.open("https://henryrecords.github.io/songs/month/nov/playlist.html");
+				else if (password == "备忘") {
+             				window.open("https://henryrecords.github.io/");
 				}
 				else if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
              				document.getElementById('search').value = "I'm fine, thank you. And you?";
