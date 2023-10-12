@@ -115,8 +115,10 @@
 				}
 				else if ((password == "see you") || (password == "See you") || (password == "see you.") || (password == "See you.")) {
              				document.getElementById('search').value = "Bye...";
-					document.getElementById('index').classList.toggle('fadein');
-					
+																	document.getElementById('index').classList.toggle('fadein');
+				}
+				else {
+																	document.getElementById('search').value = "暂无搜索结果";
 				}
 			}
 		</script>
