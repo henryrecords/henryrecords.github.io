@@ -751,6 +751,7 @@
 			var z = document.getElementById("index2");
 			var password = document.getElementById("next").value;
 				if (password == confirmPassword) {
+				setTimeout(() => { document.exitFullscreen(); }, 5000);
 				f.classList.toggle('fadein');
 				g.classList.toggle('fadein');
 				h.classList.toggle('fadein');
