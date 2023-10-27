@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Melody</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;   background-image:url(https://henryrecords.github.io/songs/month/oct/picture/melody-b.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.month {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-image:url(https://henryrecords.github.io/songs/month/oct/picture/melody.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+				background-color: black; /* opposite to 歌词界面 color */
+			}
+			.month2 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+			}
+			.month3 {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				text-align: center;
+				position: fixed;
+				background-color: black;
+				}
+			p {
+				color: black;
+			}
+			#index {
+				visibility:hidden;
+				opacity:0;
+			}
+  			#index.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="month2">      
+			<h1 style="color: white;">Melody</h1>
+			<audio loop controls id="hide2" style="visibility: hidden;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/melody.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<div id="indexshow">
+			<button onclick="indexshow();" style="position: fixed; bottom: 0%; left: 0%; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">显示歌词</button>
+		</div>
+		<div id="index">
+			<div id="text" style="overflow-y: scroll; padding-top: 270px; background-image:url(https://henryrecords.github.io/songs/month/oct/picture/white.jpg); background-size: cover; background-attachment: fixed; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+				<p>终于明白你已变成回忆</p>
+				<p>没有言语能够说明当别人问起</p>
+				<p>谱了一段旋律没有句点</p>
+				<p>也无法再继续</p>
+				<br>
+				<p>像埋伏在街头的某种气息</p>
+				<p>无意间经过把往日笑与泪勾起</p>
+				<p>忽然心痛的无法再压抑</p>
+				<p>原来从未忘记</p>
+				<br>
+				<p>Melody 脑海中的旋律转个不停</p>
+				<p>爱过你 有太多话忘了要告诉你</p>
+				<p>Melody 无数动人音符在我生命</p>
+				<p>爱过你 失去你我才知道要珍惜</p>
+				<br>
+				<p>当时无法为你写的那首歌</p>
+				<p>都是我永远的遗憾当爱逝去</p>
+				<p>如果所有的错重来一次</p>
+				<p>能否改变结局</p>
+				<br>
+				<p>终于落下休止符的那首歌</p>
+				<p>我听着每一个音符流过的回忆</p>
+				<p>为什么在那么多年以后</p>
+				<p>还不能说再见</p>
+				<br>
+				<p>Melody 脑海中的旋律如此熟悉</p>
+				<p>爱过你 在我心里只能轻轻叹息</p>
+				<p>Melody 无数动人音符在我生命</p>
+				<p>爱过你 失去你我才知道要珍惜</p>
+				<br>
+				<p>Melody oh Melody 我永远不能忘记</p>
+				<p>你是多么的美丽 让这音乐一直不停响起</p>
+				<br>
+				<p>Melody oh Melody 我舍不得去忘记</p>
+				<p>我们快乐的过去 请别让我从这梦境清醒</p>
+				<br>
+				<p>Melody 脑海中的旋律如此熟悉</p>
+				<p>爱着你 求你听我唱完这一段旋律 请不要离去</p>
+				<br>
+				<p>Melody 你是在我脑海不停的旋律</p>
+				<p>爱过你 我的心里只能无言叹息</p>
+				<p>Melody 无数动人音符在生命里</p>
+				<p>爱过你 失去后我才知道要珍惜你</p>
+				<br>
+				</br>
+			</div>
+			<div class="month">      
+				<h1 style="color: white;">Melody<!--歌词界面--></h1>
+				<audio loop controls id="hide">
+					<source src="https://henryrecords.github.io/songs/month/oct/music/melody.mp3" type="audio/ogg">
+				</audio>
+			</div>
+			<button onclick="indexhide();" style="position: fixed; right:0px; bottom: 0px; background-color: #1abc9c; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; cursor: pointer;">隐藏歌词</button>
+		</div>
+		<div class="month3" style="visibility: hidden;">      
+			<h1 style="color: white;">Melody</h1>
+			<audio loop controls id="show" style="visibility: visible;">
+				<source src="https://henryrecords.github.io/songs/month/oct/music/melody.mp3" type="audio/ogg">
+			</audio>
+		</div>
+		<script>
+    			function indexshow() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+				document.getElementById("hide").style.visibility = "hidden";
+			}
+      
+			function indexhide() {
+			var x = document.getElementById("index");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadeout');
+				y.style.visibility = "visible";
+				document.getElementById("hide2").style.visibility = "hidden";
+				document.getElementById("black").style.visibility = "hidden";
+			}
+		</script>
+	</body>
+</html>

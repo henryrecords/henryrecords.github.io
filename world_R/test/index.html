@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>主页</title>
+		<script type="text/javascript" src="https://henryrecords.github.io/script/jquery-3.6.0.js"></script>
+		<style>
+			#index {
+        			background-attachment: fixed;
+        			background-size: cover;
+        			background-color: black;
+        			position: absolute;
+        			bottom: 0;
+        			right: 0;
+        			left: 0;
+        			top: 0;
+			}
+			#index.fadeout {
+				transition: visibility 2s linear 5s, opacity 2s linear 5s;
+				visibility:hidden;
+				opacity: 0;
+			}
+            
+			#index.fadein {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:visible;
+				opacity:1; 
+			}
+
+			#password {
+				visibility:hidden;
+				opacity:0;
+			}
+
+			#password.fadein {
+				transition: visibility 0.5s linear 5s, opacity 0.5s linear 5s;
+				visibility:visible;
+				opacity:1;
+			}
+			#password.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+
+			#index2 {
+        			background-attachment: fixed;
+        			background-size: cover;
+        			position: absolute;
+        			bottom: 0;
+        			right: 0;
+        			left: 0;
+        			top: 0;
+				visibility:hidden;
+				opacity:0;
+			}
+			#index2.fadeout {
+				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index2.fadein {
+				transition: visibility 2s linear 5s, opacity 2s linear 5s;
+				visibility:visible;
+				opacity:1; 
+			}
+
+			.terminal {
+				font-family: monospace;
+				color: green;
+			}
+			
+			#terminal2 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal2.fadein {
+				transition: visibility 0s linear 1s, opacity 0s linear 1s;
+				visibility:visible;
+				opacity:1;
+			}
+			
+			#terminal3 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal3.fadein {
+				transition: visibility 0s linear 1.5s, opacity 0s linear 1.5s;
+				visibility:visible;
+				opacity:1;
+			}
+			
+			#terminal4 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal4.fadein {
+				transition: visibility 0s linear 2s, opacity 0s linear 2s;
+				visibility:visible;
+				opacity:1;
+			}
+			
+			#terminal5 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal5.fadein {
+				transition: visibility 0s linear 4.5s, opacity 0s linear 4.5s;
+				visibility:visible;
+				opacity:1;
+			}
+			
+			#terminal6 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal6.fadein {
+				transition: visibility 0s linear 0.1s, opacity 0s linear 0.1s;
+				visibility:visible;
+				opacity:1;
+			}
+			
+			#terminal7 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal7.fadein {
+				transition: visibility 0s linear 2s, opacity 0s linear 2s;
+				visibility:visible;
+				opacity:1;
+			}
+			
+			#terminal8 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal8.fadein {
+				transition: visibility 0s linear 2.3s, opacity 0s linear 2.3s;
+				visibility:visible;
+				opacity:1;
+			}
+			
+			#terminal9 {
+				visibility:hidden;
+				opacity:0;
+			}			
+			#terminal9.fadein {
+				transition: visibility 0s linear 2.6s, opacity 0s linear 2.6s;
+				visibility:visible;
+				opacity:1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="index">
+			
+			<p id="terminal1" class="terminal">CENTROLIZED //..TERMINAL..//</p>
+			<p id="terminal2" class="terminal">INITIALIZING //..TERMINAL..//</p>
+			<p id="terminal3" class="terminal">//CLASSFILE.SET //TRUE//</p>
+			<p id="terminal4" class="terminal">//LOADING ..DATA..</p>
+			<p id="terminal5" class="terminal">//DESTINATION.GET //LOCAL//</p>
+			
+			<div id="indexshow" style="background-color: black;">
+				<button onclick="terminal(); openFullscreen(); indexshow();" style="position: absolute; left:0px; top:0px; bottom: 0px; right: 0px; width: 100%; opacity: 0;"></button>
+			</div>
+			
+			<div id="password">
+				<input type="password" id="next" onkeydown="if (event.keyCode == 51) terminal2()" style="background-color: blue; color: white; opacity: 0.5;"/>
+			</div>
+
+			<p id="terminal6" class="terminal">..</p>
+			<p id="terminal7" class="terminal">..PLINTON AIRSHIP CONTROL</p>
+			<p id="terminal8" class="terminal">..YEAR 2021</p>
+			<p id="terminal9" class="terminal">..WELCOME</p>
+
+		</div>
+		
+		<div id="index2">
+        </div>
+
+		<script>	
+
+            function openFullscreen() {
+			var elem = document.documentElement;
+				if (elem.requestFullscreen) {
+					elem.requestFullscreen();
+				}
+				else if (elem.webkitRequestFullscreen) { /* Safari */
+					elem.webkitRequestFullscreen();
+				}
+				else if (elem.msRequestFullscreen) { /* IE11 */
+					elem.msRequestFullscreen();
+				}
+			}
+
+			function closeFullscreen() {
+			var elem = document.documentElement;
+				if (document.exitFullscreen) {
+					document.exitFullscreen();
+				}
+				else if (document.webkitExitFullscreen) { /* Safari */
+					document.webkitExitFullscreen();
+				}
+				else if (document.msExitFullscreen) { /* IE11 */
+					document.msExitFullscreen();
+				}
+			}
+            
+			function indexshow() {
+			var x = document.getElementById("password");
+			var y = document.getElementById("indexshow");
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.remove("fadeoutbutton");
+				x.classList.toggle('fadein');
+				y.style.visibility = "hidden";
+			}
+
+			function terminal() {
+			var b = document.getElementById("terminal2");
+			var c = document.getElementById("terminal3");
+			var d = document.getElementById("terminal4");
+			var e = document.getElementById("terminal5");
+				b.classList.toggle('fadein');
+				c.classList.toggle('fadein');
+				d.classList.toggle('fadein');
+				e.classList.toggle('fadein');
+			}
+
+			function terminal2() {
+			var f = document.getElementById("terminal6");
+			var g = document.getElementById("terminal7");
+			var h = document.getElementById("terminal8");
+			var i = document.getElementById("terminal9");
+			var confirmPassword = "800496";
+			var x = document.getElementById("index");
+			var y = document.getElementById("picturewall");
+			var z = document.getElementById("index2");
+			var password = document.getElementById("next").value;
+				if (password == confirmPassword) {
+				setTimeout(() => { document.exitFullscreen(); }, 5000);
+				f.classList.toggle('fadein');
+				g.classList.toggle('fadein');
+				h.classList.toggle('fadein');
+				i.classList.toggle('fadein');
+				x.classList.remove("fadein");
+				x.classList.remove("fadeout");
+				x.classList.toggle('fadeout');
+				y.classList.remove("fadein");
+				y.classList.remove("fadeout");
+				y.classList.toggle('fadein');
+				z.classList.remove("fadein");
+				z.classList.remove("fadeout");
+				z.classList.toggle('fadein');
+				}
+            }
+		</script>
+	</body>
+</html>

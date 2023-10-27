@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Versions</title>
+		<link href="https://henryrecords.github.io/songs/mainicon.png" rel="shortcut icon" type="image/x-icon" />
+		<style>
+			p {
+				font-family: monospace;
+				color: green;
+			}
+			h3 {
+				font-family: monospace;
+				color: green;
+			}
+			h2 {
+				font-family: monospace;
+				color: green;
+			}
+			h1 {
+				font-family: monospace;
+				color: green;
+			}
+			body {
+				background-color: black;
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			body::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.dark {
+				animation-duration: 6.5s;
+				animation-name: sparkling;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes sparkling {
+				from {
+					opacity: 0.8;
+				}
+				10% {
+					opacity: 0.8;
+				}
+				11% {
+					opacity: 1;
+				}
+				12% {
+					opacity: 0.8;
+				}
+				15% {
+					opacity: 0.8;
+				}
+				16% {
+					opacity: 1;
+				}
+				17% {
+					opacity: 0.8;
+				}
+				50% {
+					opacity: 0.8;
+				}
+				51% {
+					opacity: 1;
+				}
+				52% {
+					opacity: 0.8;
+				}
+				60% {
+					opacity: 0.8;
+				}
+				61% {
+					opacity: 1;
+				}
+				75% {
+					opacity: 1;
+				}
+				76% {
+					opacity: 0.8;
+				}
+				to {
+					opacity: 0.8;
+				}
+			}
+			.dark2 {
+				animation-duration: 6.5s;
+				animation-name: sparkling2;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes sparkling2 {
+				from {
+					opacity: 0.8;
+				}
+				11% {
+					opacity: 0.8;
+				}
+				12% {
+					opacity: 1;
+				}
+				13% {
+					opacity: 0.8;
+				}
+				16% {
+					opacity: 0.8;
+				}
+				17% {
+					opacity: 1;
+				}
+				18% {
+					opacity: 0.8;
+				}
+				51% {
+					opacity: 0.8;
+				}
+				52% {
+					opacity: 1;
+				}
+				53% {
+					opacity: 0.8;
+				}
+				61% {
+					opacity: 0.8;
+				}
+				62% {
+					opacity: 1;
+				}
+				76% {
+					opacity: 1;
+				}
+				77% {
+					opacity: 0.8;
+				}
+				to {
+					opacity: 0.8;
+				}
+			}
+			.dark3 {
+				animation-duration: 6.5s;
+				animation-name: sparkling3;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes sparkling3 {
+				from {
+					opacity: 0.8;
+				}
+				12% {
+					opacity: 0.8;
+				}
+				13% {
+					opacity: 1;
+				}
+				14% {
+					opacity: 0.8;
+				}
+				17% {
+					opacity: 0.8;
+				}
+				18% {
+					opacity: 1;
+				}
+				19% {
+					opacity: 0.8;
+				}
+				52% {
+					opacity: 0.8;
+				}
+				53% {
+					opacity: 1;
+				}
+				54% {
+					opacity: 0.8;
+				}
+				62% {
+					opacity: 0.8;
+				}
+				63% {
+					opacity: 1;
+				}
+				77% {
+					opacity: 1;
+				}
+				78% {
+					opacity: 0.8;
+				}
+				to {
+					opacity: 0.8;
+				}
+			}
+			.typing1 {
+				animation-duration: 5s;
+				animation-name: typing1;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing1 {
+				from {
+					opacity: 0;
+				}
+				2.499% {
+					opacity: 0;
+				}
+				2.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing2 {
+				animation-duration: 5s;
+				animation-name: typing2;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing2 {
+				from {
+					opacity: 0;
+				}
+				4.999% {
+					opacity: 0;
+				}
+				5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing3 {
+				animation-duration: 5s;
+				animation-name: typing3;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing3 {
+				from {
+					opacity: 0;
+				}
+				7.499% {
+					opacity: 0;
+				}
+				7.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing4 {
+				animation-duration: 5s;
+				animation-name: typing4;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing4 {
+				from {
+					opacity: 0;
+				}
+				9.999% {
+					opacity: 0;
+				}
+				10% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing5 {
+				animation-duration: 5s;
+				animation-name: typing5;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing5 {
+				from {
+					opacity: 0;
+				}
+				12.499% {
+					opacity: 0;
+				}
+				12.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing6 {
+				animation-duration: 5s;
+				animation-name: typing6;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing6 {
+				from {
+					opacity: 0;
+				}
+				14.999% {
+					opacity: 0;
+				}
+				15% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing7 {
+				animation-duration: 5s;
+				animation-name: typing7;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing7 {
+				from {
+					opacity: 0;
+				}
+				17.499% {
+					opacity: 0;
+				}
+				17.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing8 {
+				animation-duration: 5s;
+				animation-name: typing8;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing8 {
+				from {
+					opacity: 0;
+				}
+				19.999% {
+					opacity: 0;
+				}
+				20% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing9 {
+				animation-duration: 5s;
+				animation-name: typing9;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing9 {
+				from {
+					opacity: 0;
+				}
+				22.499% {
+					opacity: 0;
+				}
+				22.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing10 {
+				animation-duration: 5s;
+				animation-name: typing10;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing10 {
+				from {
+					opacity: 0;
+				}
+				24.999% {
+					opacity: 0;
+				}
+				25% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing11 {
+				animation-duration: 5s;
+				animation-name: typing11;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing11 {
+				from {
+					opacity: 0;
+				}
+				27.499% {
+					opacity: 0;
+				}
+				27.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing12 {
+				animation-duration: 5s;
+				animation-name: typing12;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing12 {
+				from {
+					opacity: 0;
+				}
+				29.999% {
+					opacity: 0;
+				}
+				30% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing13 {
+				animation-duration: 5s;
+				animation-name: typing13;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing13 {
+				from {
+					opacity: 0;
+				}
+				32.499% {
+					opacity: 0;
+				}
+				32.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing14 {
+				animation-duration: 5s;
+				animation-name: typing14;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing14 {
+				from {
+					opacity: 0;
+				}
+				34.999% {
+					opacity: 0;
+				}
+				35% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing15 {
+				animation-duration: 5s;
+				animation-name: typing15;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing15 {
+				from {
+					opacity: 0;
+				}
+				37.499% {
+					opacity: 0;
+				}
+				37.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing16 {
+				animation-duration: 5s;
+				animation-name: typing16;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing16 {
+				from {
+					opacity: 0;
+				}
+				39.999% {
+					opacity: 0;
+				}
+				40% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing17 {
+				animation-duration: 5s;
+				animation-name: typing17;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing17 {
+				from {
+					opacity: 0;
+				}
+				42.499% {
+					opacity: 0;
+				}
+				42.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing18 {
+				animation-duration: 5s;
+				animation-name: typing18;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing18 {
+				from {
+					opacity: 0;
+				}
+				44.999% {
+					opacity: 0;
+				}
+				45% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing19 {
+				animation-duration: 5s;
+				animation-name: typing19;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing19 {
+				from {
+					opacity: 0;
+				}
+				47.499% {
+					opacity: 0;
+				}
+				47.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing20 {
+				animation-duration: 5s;
+				animation-name: typing20;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing20 {
+				from {
+					opacity: 0;
+				}
+				49.999% {
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing21 {
+				animation-duration: 5s;
+				animation-name: typing21;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing21 {
+				from {
+					opacity: 0;
+				}
+				52.499% {
+					opacity: 0;
+				}
+				52.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing22 {
+				animation-duration: 5s;
+				animation-name: typing22;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing22 {
+				from {
+					opacity: 0;
+				}
+				54.999% {
+					opacity: 0;
+				}
+				55% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing23 {
+				animation-duration: 5s;
+				animation-name: typing23;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing23 {
+				from {
+					opacity: 0;
+				}
+				57.499% {
+					opacity: 0;
+				}
+				57.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing24 {
+				animation-duration: 5s;
+				animation-name: typing24;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing24 {
+				from {
+					opacity: 0;
+				}
+				59.999% {
+					opacity: 0;
+				}
+				60% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing25 {
+				animation-duration: 5s;
+				animation-name: typing25;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing25 {
+				from {
+					opacity: 0;
+				}
+				62.499% {
+					opacity: 0;
+				}
+				62.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing26 {
+				animation-duration: 5s;
+				animation-name: typing26;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing26 {
+				from {
+					opacity: 0;
+				}
+				64.999% {
+					opacity: 0;
+				}
+				65% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing27 {
+				animation-duration: 5s;
+				animation-name: typing27;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing27 {
+				from {
+					opacity: 0;
+				}
+				67.499% {
+					opacity: 0;
+				}
+				67.5% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.typing28 {
+				animation-duration: 5s;
+				animation-name: typing28;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			@keyframes typing28 {
+				from {
+					opacity: 0;
+				}
+				69.999% {
+					opacity: 0;
+				}
+				70% {
+					opacity: 1;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div style="position: absolute; left: 0px; right: 70%; padding: 0px 0px 75px 10px;">
+			<h3>Local Version 1.0</h3>
+			<p>Established: Oct 13, 2021</p>
+			<p class="dark">Created henryrecord/songs database</p>
+			<p class="dark">Created music calendar template</p>
+			<p class="dark">Created music player template</p>
+			<p>Completed: Oct 13, 2021</p>
+			<br>
+			<h3>Local Version OCT2021</h3>
+			<p>Started: Oct 25, 2021</p>
+			<p class="dark">Created OCT2021 template</p>
+			<p class="dark">Template Summary: Background picture</p>
+			<p class="dark">Template overview: Added background pictures to each song, accompany with transitions button on showing and hiding lyrics.</p>
+			<p>Completed: Nov 14, 2021</p>
+			<br>
+			<h3>Local Version NOV2021</h3>
+			<p>Started: Nov 3, 2021</p>
+			<p class="dark">Created NOV2021 template</p>
+			<p class="dark">Template Summary: Animation</p>
+			<p class="dark">Template overview: Reduced complexity of source code and added animation to the title of each song, with automatic transitions upon loading each page.</p>
+			<p>E<span class="typing1">s</span><span class="typing2">t</span><span class="typing3">i</span><span class="typing4">m</span><span class="typing5">a</span><span class="typing6">t</span><span class="typing7">e</span> <span class="typing8">C</span><span class="typing9">o</span><span class="typing10">m</span><span class="typing11">p</span><span class="typing12">l</span><span class="typing13">e</span><span class="typing14">t</span><span class="typing15">i</span><span class="typing16">o</span><span class="typing17">n</span><span class="typing18">:</span> Dec 12, 2021</p>
+			<br>
+			<h3>Local Version 1.1</h3>
+			<p>Started: Nov 16, 2021</p>
+			<p class="dark">Created playlist template</p>
+			<p class="dark">Created playlist for OCT2021</p>
+			<p>Completed: Nov 16, 2021</p>
+			<br>
+			<h3>Local Version 1.2</h3>
+			<p>Started: Nov 28, 2021</p>
+			<p class="dark">Update Summary: Modified home page by adding the search bar and uploaded NWEI logo. Modified music calendar template applied to each month by dividing calendar interface into multiple colored layers.</p>
+			<p>Completed: Nov 28, 2021</p>
+			<br>
+			<h3>Local Version DEC2021</h3>
+			<p>Started: Dec 1, 2021</p>
+			<p>E<span class="typing1">s</span><span class="typing2">t</span><span class="typing3">i</span><span class="typing4">m</span><span class="typing5">a</span><span class="typing6">t</span><span class="typing7">e</span> <span class="typing8">C</span><span class="typing9">o</span><span class="typing10">m</span><span class="typing11">p</span><span class="typing12">l</span><span class="typing13">e</span><span class="typing14">t</span><span class="typing15">i</span><span class="typing16">o</span><span class="typing17">n</span><span class="typing18">:</span> Jan 12, 2022</p>
+			<br>
+		</div>
+		<div style="position: absolute; left: 35%; right: 35%; padding: 0px 0px 75px 0px;">
+			<h3>Testing Project One</h3>
+			<p>Introduced: Nov 10, 2021</p>
+			<p class="dark2">Overview: Design around the song "Handwritten Past", creating simple platform enabling on-time lyrics along with the music and animations such as progress bar and moving objects.</p>
+			<p>R<span class="typing1">e</span><span class="typing2">l</span><span class="typing3">e</span><span class="typing4">a</span><span class="typing5">s</span><span class="typing6">i</span><span class="typing7">n</span><span class="typing8">g</span><span class="typing9">:</span> Estimate first releasing to local JAN2022 version.
+		</div>
+		<div style="position: absolute; right: 0px; left: 70%; padding: 0px 10px 75px 0px;">
+			<h3>Publish Version 1.0</h3>
+			<p>Published: Dec 6, 2021</p>
+			<p class="dark3">Corresponding to: Local Version 1.2</p>
+			<p class="dark3">Purpose: Final project presentation in WRI-001.</p>
+			<p>O<span class="typing1">n</span><span class="typing2">l</span><span class="typing3">i</span><span class="typing4">n</span><span class="typing5">e</span> <span class="typing6">U</span><span class="typing7">n</span><span class="typing8">t</span><span class="typing9">i</span><span class="typing10">l</span><span class="typing11">:</span> Dec 21, 2021</p>
+		</div>
+    
+		<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
+			<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
+				<p onclick="location.href='https://henryrecords.github.io/';" style="cursor: pointer; font-size: 20px;"><strong>H</strong>enry<strong>R</strong>ecords</p>
+				<p onclick="location.href='https://henryrecords.github.io/';" style="cursor: pointer;">.github.io</p>
+			</div>
+		</div>
+		<div style="position: fixed; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
+			<div id="footright" style="line-height: 1%; text-align: center; color: white;">
+				<p style="font-size: 20px;"><strong>NW</strong>EI</p>
+				<p>.github.io</p>
+			</div>
+		</div>
+		<div style="position: fixed; padding: 0px 0px 0px 0px; right: 30%; bottom: 0px; left: 30%; background-color: black;">
+			<div id="footright" style="line-height: 1%; text-align: center; color: white;">
+				<img src="https://henryrecords.github.io/songs/mainlogo.png" style="width: 75px;"/>
+			</div>
+		</div>
+  </body>
+</html>
