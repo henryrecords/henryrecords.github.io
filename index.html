@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>主页</title>
-		<link href="https://henryrecords.github.io/songs/mainicon.png" rel="shortcut icon" type="image/x-icon"/>
 		<style>
-			body {
+			#left {
+				width: 50%;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				bottom: 0px;
+				background-color: black;
+				background-size: cover;
 				text-align: center;
 			}
-			input {
+			#right {
 				width: 50%;
-				box-sizing: border-box;
-				border: 2px solid #ccc;
-				border-radius: 4px;
-				font-size: 16px;
-				background-size: 22px;
-				background-color: white;
-				background-image: url('https://henryrecords.github.io/songs/mainicon.png');
-				background-position: 10px 10px; 
-				background-repeat: no-repeat;
-				padding: 12px 20px 12px 40px;
-				max-height: 100%;
 				position: absolute;
-				bottom: 50%;
-				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
+				right: 0px;
+				top: 0px;
+				bottom: 0px;
+				background-color: black;
+				background-size: cover;
+				text-align: center;
 			}
-			input:focus {
-				border: 3px solid #555;
+			#leftheader {
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				margin-top: 27%;
+				font-size: 400%;
+				color: green;
 			}
-			.data {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-				display: none;
+			#rightheader {
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				margin-top: 27%;
+				font-size: 400%;
+				color: red;
+			}
+			.button {
+				min-width: 230px;
+				margin-top: 0px;
+				background-color: transparent;
+				border-color: white;
+				border-width: 2px;
+				text-align: center;
 			}
 		</style>
 	</head>
 	<body>
-		<input placeholder="^...^" list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
-		<datalist id="select">
-			<option>日记</option>
-			<option>记事</option>
-			<option>文学</option>
-			<option>音乐</option>
-			<option>学术</option>
-			<option>外交</option>
-			<option>财务</option>
-			<option>备忘</option>
-		</datalist>
+		<div id="left">
+			<h1 id="leftheader">World_R</h1>
+			<a href="https:henryrecords.github.io/world_R/index.html"><button class="button" style="color: green; ">进入 World_R</button></a>
+		</div>
+		<div id="right">
+			<h1 id="rightheader">World_X</h1>
+			<a href="https:henryrecords.github.io/world_X/index.html"><button class="button" style="color: red; ">启程 World_X</button></a>
+		</div>
 		<a href="https://www.google.com">
 			<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
 				<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
@@ -69,56 +73,8 @@
 		</a>
 		<div style="position: fixed; padding: 0px 0px 0px 0px; right: 30%; bottom: 0px; left: 30%; background-color: black;">
 			<div id="footright" style="line-height: 1%; text-align: center; color: white;">
-				<img src="https://henryrecords.github.io/songs/mainlogo.png" style="width: 75px;"/>
+				<img src="https://henryrecords.github.io\world_R\directory\4_song\mainlogo.png" style="width: 75px;"/>
 			</div>
 		</div>
-		<script>
-			function search() {
-				var password = document.getElementById("search").value;
-				if (password == "日记") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "日程") {
-					window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "记事") {
-					window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "文学") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "音乐") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "学术") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "外交") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "财务") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "备忘") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
-             		document.getElementById('search').value = "I'm fine, thank you. And you?";
-				}
-				else if ((password == "what's the date") || (password == "What's the date") || (password == "what's the date?") || (password == "What's the date?")) {
-             		document.getElementById('search').value = "Dec-06, 2021";
-				}
-				else if ((password == "what's your name") || (password == "What's your name") || (password == "what's your name?") || (password == "What's your name?")) {
-             		document.getElementById('search').value = "Lord Search Bar.";
-				}
-				else if ((password == "see you") || (password == "See you") || (password == "see you.") || (password == "See you.")) {
-             		document.getElementById('search').value = "Bye...";
-					document.getElementById('index').classList.toggle('fadein');
-				}
-				else {
-					document.getElementById('search').value = "暂无搜索结果";
-				}
-			}
-		</script>
 	</body>
 </html>
