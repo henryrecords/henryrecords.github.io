@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tokyo Girl</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				text-align: center;
+				background-image: url(https://henryrecords.github.io/songs/month/nov/b.jpg);
+			}
+			#text {
+				-ms-overflow-style: none; /* for Internet Explorer, Edge */
+				scrollbar-width: none; /* for Firefox */
+				overflow-y: scroll; 
+			}
+			#text::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+			}
+			.title {
+				padding: 70px 25px 10px 25px;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				position: fixed;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,1) 95%, rgba(0,0,0,0));
+			}
+			p {
+				color: black;
+				font-size: 25px;
+			}
+
+			#anime {
+				animation-duration: 5s;
+				animation-name: anime;
+				animation-iteration-count:;
+				animation-delay: 1s;
+				animation-fill-mode: forwards;
+			}
+
+			@keyframes anime {
+				from {
+					margin-left: 100%;
+					opacity: 0;
+					width: 100%;
+				}
+				to {
+					margin-left: 0%;
+					opacity: 1;
+					width: 100%;
+				}
+			}
+			.anime2 {
+				animation-duration: 5s;
+				animation-name: anime2;
+				animation-iteration-count:;
+				animation-delay: 1s;
+				animation-fill-mode: forwards;
+			}
+
+			@keyframes anime2 {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			.anime3 {
+				animation-duration: 5s;
+				animation-name: anime2;
+				animation-iteration-count:;
+				animation-delay: 4s;
+				animation-fill-mode: forwards;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="anime3" id="text" style="overflow-y: scroll; padding-top: 270px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; opacity: 0;">
+			<p>太陽が射しこむ街で目を覚ます</p>
+			<p>情報を掻き分ける熱帯魚</p>
+			<p>平凡を許してくれない水槽で</p>
+			<p>どんな風に気持ち良く泳げたら</p>
+			<br>
+			<p>Lighting Lighting 照らして</p>
+			<p>Singing 今日も着飾って</p>
+			<p>ハッピー Feeling good 見渡して</p>
+			<p>めいっぱいに手を伸ばして</p>
+			<br>
+			<p>踊れ Boom Boom TOKYO GIRL</p>
+			<p>色とりどりの恋</p>
+			<p>Let us be going！ going！ BOY</p>
+			<p>Kawaii と駆ける未来</p>
+			<br>
+			<p>踊れ Boom Boom TOKYO GIRL</p>
+			<p>廻る街 メリーゴーランド</p>
+			<p>彩りのサラウンド 奏でるわ</p>
+			<p>ここにいるあなたへ</p>
+			<br>
+			<p>夢見る TOKYO GIRL</p>
+			<br>
+			<p>たくさんのモノが行き交う街で</p>
+			<p>何気なく見てる風景に</p>
+			<p>なにかもの足りない特別な</p>
+			<p>未来を指差して求めてる</p>
+			<br>
+			<p>Lighting Lighting 照らして</p>
+			<p>Singing 今日も着飾って</p>
+			<p>ハッピー Feeling good 見渡して</p>
+			<p>めいっぱいに手を伸ばして</p>
+			<br>
+			<p>踊れ Boom Boom TOKYO GIRL</p>
+			<p>色とりどりの恋</p>
+			<p>Let us be going！ going！ BOY</p>
+			<p>Kawaii と駆ける未来</p>
+			<br>
+			<p>踊れ Boom Boom TOKYO GIRL</p>
+			<p>廻る街 メリーゴーランド</p>
+			<p>彩りのサラウンド 奏でるわ</p>
+			<p>ここにいるあなたへ</p>
+			<br>
+			</br>
+		</div>
+		<div class="title anime2" style="opacity: 0;">      
+			<h1 id="anime" style="color: white;">Tokyo Girl</h1>
+			<audio loop controls>
+				<source src="https://henryrecords.github.io/songs/month/nov/tokyogirl/tokyogirl.mp3" type="audio/ogg">
+			</audio>
+		</div>
+	</body>
+</html>
