@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>主页</title>
+		<title>World_R</title>
 		<link href="https://henryrecords.github.io/attachment/mainicon.png" rel="shortcut icon" type="image/x-icon"/>
 		<style>
 			body {
@@ -20,36 +20,45 @@
 				background-repeat: no-repeat;
 				padding: 12px 20px 12px 40px;
 				max-height: 100%;
-				position: absolute;
-				bottom: 50%;
-				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
+				margin-top: 20%;
 			}
 			input:focus {
 				border: 3px solid #555;
 			}
-			.data {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-				display: none;
+			#buttons {
+				background-color: ;
+				width: 50%;
+				margin: auto;
+				margin-top: 15px;
+			}
+			.buttons {
+				width: 14.2857%;
+				border-width: 0px;
+				border-color: gray;
+				padding: 5px;
+				transition-duration: 0.4s;
+				background-color: white;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+				cursor: pointer;
+				float: left;
+			}
+			.buttons:hover {
+  				background-color: black;
+				color: white;
 			}
 		</style>
 	</head>
 	<body>
 		<input placeholder="^...^" list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
-		<datalist id="select">
-			<option>日记</option>
-			<option>备忘</option>
-			<option>文学</option>
-			<option>音乐</option>
-			<option>学术</option>
-			<option>外交</option>
-			<option>财务</option>
-		</datalist>
+		<div id="buttons">
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/1_dairy/index.html';">日记</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/2_record/index.html';">备忘</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/3_literature/index.html';">文学</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/4_media/index.html';">媒体</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/5_academic/index.html';">学术</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/6_contact/index.html';">外交</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/7_finance/index.html';">财务</button>
+		</div>
 		<a href="https://www.google.com">
 			<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
 				<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
@@ -75,31 +84,25 @@
 			function search() {
 				var password = document.getElementById("search").value;
 				if (password == "日记") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "日程") {
-					window.open("https://henryrecords.github.io/");
+             		window.open("https://henryrecords.github.io/world_R/directory/1_dairy/index.html");
 				}
 				else if (password == "记事") {
-					window.open("https://henryrecords.github.io/");
+					window.open("https://henryrecords.github.io/world_R/directory/2_record/index.html");
 				}
 				else if (password == "文学") {
-             		window.open("https://henryrecords.github.io/");
+             		window.open("https://henryrecords.github.io/world_R/directory/3_literature/index.html");
 				}
-				else if (password == "音乐") {
-             		window.open("https://henryrecords.github.io/");
+				else if (password == "媒体") {
+             		window.open("https://henryrecords.github.io/world_R/directory/4_media/index.html");
 				}
 				else if (password == "学术") {
-             		window.open("https://henryrecords.github.io/");
+             		window.open("https://henryrecords.github.io/world_R/directory/5_academic/index.html");
 				}
 				else if (password == "外交") {
-             		window.open("https://henryrecords.github.io/");
+             		window.open("https://henryrecords.github.io/world_R/directory/6_contact/index.html");
 				}
 				else if (password == "财务") {
-             		window.open("https://henryrecords.github.io/");
-				}
-				else if (password == "备忘") {
-             		window.open("https://henryrecords.github.io/");
+             		window.open("https://henryrecords.github.io/world_R/directory/7_finance/index.html");
 				}
 				else if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
              		document.getElementById('search').value = "I'm fine, thank you. And you?";
