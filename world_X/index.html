@@ -257,7 +257,6 @@
                 function(){
                     if(timeleft <= 0){
                         clearInterval(downloadTimer);
-                        document.getElementById("countdown").innerHTML = "AUTHENTICATED";
                         document.getElementById("terminal1").innerHTML = "CENTROLIZED //..TERMINAL..//";
                     } 
                     else {
@@ -273,8 +272,11 @@
 			var z = document.getElementById("index2");
 			var password = document.getElementById("next").value;
 				if (password != confirmPassword) {
-                    close();
+                    window.close();
                 }
+				else if (password == confirmPassword) {
+					document.getElementById("countdown").innerHTML = "AUTHENTICATED";
+				}
             } , 11000)
 
 
