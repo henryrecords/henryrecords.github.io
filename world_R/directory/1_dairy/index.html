@@ -73,7 +73,7 @@
 				if (password == "2023") {
 					document.getElementById("divmain").classList.toggle('fadeout');
 					document.getElementById("div2023").classList.toggle("fadein");
-					document.getElementById("searchmain").value = ""
+					document.getElementById("searchmain").value = "";
 				}
 			}
 		</script>
@@ -102,14 +102,74 @@
 		<script>
 			function search2023() {
 				var password = document.getElementById("search2023").value;
-				if (password == "2023") {
+				if (password == "202311") {
 					document.getElementById("div2023").classList.toggle('fadeout');
-					document.getElementById("div2023").classList.remove("fadein");
+					document.getElementById("div202311").classList.remove("fadein");
+					document.getElementById("search2023").value = "";
+				}
+				else if (password == "202312") {
+					document.getElementById("div2023").classList.toggle('fadeout');
+					document.getElementById("div202312").classList.remove("fadein");
+					document.getElementById("search2023").value = "";
 				}
 			}
 			function backmain() {
 					document.getElementById("divmain").classList.toggle('fadeout');
 					document.getElementById("div2023").classList.toggle("fadein");
+			}
+		</script>
+
+		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+		<style>
+			#div202311 {
+				display: none;
+				opacity: 0;
+			}
+			#div202311.fadein {
+				transition: visibility 0s linear 0s, opacity 0s linear 0s;
+				display: block;
+				opacity: 1;
+			}
+		</style>
+		<div id="div202311">
+			<div style="position: fixed; padding: 0px 0px 0px 0px; right: 30%; bottom: 0px; left: 30%; background-color: black;" onclick="back2023();">
+				<div id="footright" style="line-height: 1%; text-align: center; color: white;">
+					<img src="https://henryrecords.github.io/attachment/mainlogo.png" style="width: 75px;"/>
+				</div>
+			</div>
+		</div>
+		<script>
+			function backmain() {
+					document.getElementById("div2023").classList.toggle('fadeout');
+					document.getElementById("div202311").classList.toggle("fadein");
+			}
+		</script>
+
+		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+		<style>
+			#div202312 {
+				display: none;
+				opacity: 0;
+			}
+			#div202312.fadein {
+				transition: visibility 0s linear 0s, opacity 0s linear 0s;
+				display: block;
+				opacity: 1;
+			}
+		</style>
+		<div id="div202312">
+			<div style="position: fixed; padding: 0px 0px 0px 0px; right: 30%; bottom: 0px; left: 30%; background-color: black;" onclick="back2023();">
+				<div id="footright" style="line-height: 1%; text-align: center; color: white;">
+					<img src="https://henryrecords.github.io/attachment/mainlogo.png" style="width: 75px;"/>
+				</div>
+			</div>
+		</div>
+		<script>
+			function backmain() {
+					document.getElementById("div2023").classList.toggle('fadeout');
+					document.getElementById("div202312").classList.toggle("fadein");
 			}
 		</script>
 
