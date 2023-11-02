@@ -188,10 +188,58 @@
 				visibility:visible;
 				opacity:1;
 			}
+			#blocktext {
+				visibility: hidden;
+				animation-duration: 1.0s;
+				animation-name: sparkling;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
+			#blocktext.fadein {
+				transition: visibility 0s linear 0s, opacity 0s linear 0s;
+				visibility: visible;
+			}
+			#block {
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				visibility: hidden;
+				opacity: 0;
+				z-index: 100;
+				background-color: green;
+			}
+			#block.fadein {
+				transition: visibility 0s linear 0s, opacity 0s linear 0s;
+				visibility: visible;
+				opacity: 1;
+			}
+			@keyframes sparkling {
+				from {
+					opacity: 0;
+				}
+				1% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 1;
+				}
+				51% {
+					opacity: 0;
+				}
+				to {
+					opacity: 0;
+				}
+			}
 		</style>
 	</head>
 
 	<body>
+		<div id="block">
+			<h1 id="blocktext" style="position: absolute; z-index: 100; color: red; margin-top: 20%; font-family: monospace; font-size: 50px;">//ACCESS DENIED//</h1>
+		</div>
 		<div id="index">
 			
 			<p id="terminal1" class="terminal">CENTROLIZED //..TERMINAL..//</p>
@@ -270,9 +318,12 @@
             setTimeout(function timercheck() {
             var confirmPassword = "wsy07230";
 			var z = document.getElementById("index2");
+			var block = document.getElementById("block");
+			var block = document.getElementById("blocktext");
 			var password = document.getElementById("next").value;
 				if (password != confirmPassword) {
-                    window.open("https://henryrecords.github.io/world_X/deny.html","_self")
+                    block.classList.toggle('fadein');
+					blocktext.classlist.toggle('fadein');
                 }
 				else if (password == confirmPassword) {
 					document.getElementById("countdown").innerHTML = "AUTHENTICATED";
