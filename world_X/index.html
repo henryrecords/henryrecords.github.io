@@ -43,9 +43,15 @@
         			right: 0;
         			left: 0;
         			top: 0;
+					z-index: 50;
 			}
 			#index.fadeout {
 				transition: visibility 2s linear 5s, opacity 2s linear 5s;
+				visibility:hidden;
+				opacity: 0;
+			}
+			#index.blackout {
+				transition: visibility 0s linear 0s, opacity 0s linear 0s;
 				visibility:hidden;
 				opacity: 0;
 			}
@@ -68,6 +74,11 @@
 			}
 			#password.fadeout {
 				transition: visibility 1s linear, opacity 1s linear;
+				visibility:hidden;
+				opacity:0;
+			}
+			#password.blackout {
+				transition: visibility 0s linear, opacity 0s linear;
 				visibility:hidden;
 				opacity:0;
 			}
@@ -190,6 +201,8 @@
 			}
 			#blocktext {
 				visibility: hidden;
+				margin-top: 20%;
+				text-align: center;
 				animation-duration: 1.0s;
 				animation-name: sparkling;
 				animation-iteration-count: infinite;
@@ -202,14 +215,15 @@
 			}
 			#block {
 				position: absolute;
+				text-align: center;
 				top: 0px;
 				bottom: 0px;
 				left: 0px;
 				right: 0px;
 				visibility: hidden;
 				opacity: 0;
-				z-index: 100;
-				background-color: green;
+				background-color: blue;
+				background-size: cover;
 			}
 			#block.fadein {
 				transition: visibility 0s linear 0s, opacity 0s linear 0s;
@@ -233,12 +247,19 @@
 					opacity: 0;
 				}
 			}
+			#countdown {
+				animation-duration: 1.0s;
+				animation-name: sparkling;
+				animation-iteration-count: infinite;
+				animation-direction: ;
+				animation-delay: 0s;
+			}
 		</style>
 	</head>
 
 	<body>
 		<div id="block">
-			<h1 id="blocktext" style="position: absolute; z-index: 100; color: red; margin-top: 20%; font-family: monospace; font-size: 50px;">//ACCESS DENIED//</h1>
+			<h1 id="blocktext" style="color: red; font-family: monospace; font-size: 40px;">//..ACCESS DENIED..//</h1>
 		</div>
 		<div id="index">
 			
@@ -250,7 +271,7 @@
             <p id="countdown" class="terminal"></p>
 			
 			<div id="indexshow" style="background-color: black;">
-				<button onclick="terminal(); openFullscreen(); indexshow();" style="position: absolute; left:0px; top:0px; bottom: 0px; right: 0px; width: 100%; opacity: 0;"></button>
+				<button onclick="terminal(); openFullscreen(); show();" style="position: absolute; left:0px; top:0px; bottom: 0px; right: 0px; width: 100%; opacity: 0;"></button>
 			</div>
 			
 			<div id="password">
@@ -316,17 +337,28 @@
             } , 0)
 
             setTimeout(function timercheck() {
-            var confirmPassword = "wsy07230";
-			var z = document.getElementById("index2");
+            var confirmPassword = "wsy072303";
 			var block = document.getElementById("block");
-			var block = document.getElementById("blocktext");
+			var blocktext = document.getElementById("blocktext");
 			var password = document.getElementById("next").value;
+			var x = document.getElementById("index");
+			var y = document.getElementById("password")
 				if (password != confirmPassword) {
-                    block.classList.toggle('fadein');
-					blocktext.classlist.toggle('fadein');
+					x.classList.remove("fadein");
+					x.classList.remove("fadeout");
+					x.classList.remove("blackout");
+					x.classList.toggle('blackout');
+					block.classList.remove('fadein');
+					block.classList.toggle('fadein');
+					blocktext.classList.remove('fadein');
+					blocktext.classList.toggle('fadein');
+					y.classList.remove("fadein");
+					y.classList.remove("fadeout");
+					y.classList.remove('blackout');
+					y.classList.toggle('blackout');
                 }
 				else if (password == confirmPassword) {
-					document.getElementById("countdown").innerHTML = "AUTHENTICATED";
+					document.getElementById("countdown").innerHTML = "//..AUTHENTICATED..//";
 				}
             } , 11000)
 
@@ -357,12 +389,11 @@
 				}
 			}
             
-			function indexshow() {
+			function show() {
 			var x = document.getElementById("password");
 			var y = document.getElementById("indexshow");
 				x.classList.remove("fadein");
 				x.classList.remove("fadeout");
-				x.classList.remove("fadeoutbutton");
 				x.classList.toggle('fadein');
 				y.style.visibility = "hidden";
 			}
@@ -377,30 +408,48 @@
 				c.classList.toggle('fadein');
 				d.classList.toggle('fadein');
 				e.classList.toggle('fadein');
-                f.classList.toggle('fadein')
+                f.classList.toggle('fadein');
 			}
 
 			function terminal2() {
+			var b = document.getElementById("terminal2");
+			var c = document.getElementById("terminal3");
+			var d = document.getElementById("terminal4");
+			var e = document.getElementById("terminal5");
+            var j = document.getElementById("countdown");
 			var f = document.getElementById("terminal6");
 			var g = document.getElementById("terminal7");
 			var h = document.getElementById("terminal8");
 			var i = document.getElementById("terminal9");
 			var confirmPassword = "wsy07230";
 			var x = document.getElementById("index");
+			var y = document.getElementById("password");
 			var z = document.getElementById("index2");
 			var password = document.getElementById("next").value;
 				if (password == confirmPassword) {
-				setTimeout(() => { document.exitFullscreen(); }, 5000);
-				f.classList.toggle('fadein');
-				g.classList.toggle('fadein');
-				h.classList.toggle('fadein');
-				i.classList.toggle('fadein');
-				x.classList.remove("fadein");
-				x.classList.remove("fadeout");
-				x.classList.toggle('fadeout');
-				z.classList.remove("fadein");
-				z.classList.remove("fadeout");
-				z.classList.toggle('fadein');
+				setTimeout(() => { document.exitFullscreen(); }, 10000);
+				y.classList.remove("fadein");
+				y.classList.remove("fadeout");
+				y.classList.toggle('fadeout');
+				setTimeout(() => {f.classList.toggle('fadein'); }, 5000);
+				setTimeout(() => {g.classList.toggle('fadein'); }, 5000);
+				setTimeout(() => {h.classList.toggle('fadein'); }, 5000);
+				setTimeout(() => {i.classList.toggle('fadein'); }, 5000);
+				setTimeout(() => {x.classList.remove("fadein"); }, 5000);
+				setTimeout(() => {x.classList.remove("fadeout"); }, 5000);
+				setTimeout(() => {x.classList.toggle('fadeout'); }, 5000);
+				setTimeout(() => {z.classList.remove("fadein"); }, 5000);
+				setTimeout(() => {z.classList.remove("fadeout"); }, 5000);
+				setTimeout(() => {z.classList.toggle('fadein'); }, 5000);
+				setTimeout(() => {b.classList.toggle('fadein'); }, 10000);
+				setTimeout(() => {c.classList.toggle('fadein'); }, 10000);
+				setTimeout(() => {d.classList.toggle('fadein'); }, 10000);
+				setTimeout(() => {e.classList.toggle('fadein'); }, 10000);
+                setTimeout(() => {j.classList.toggle('fadein'); }, 10000);
+				setTimeout(() => {f.classList.toggle('fadein'); }, 10000);
+				setTimeout(() => {g.classList.toggle('fadein'); }, 10000);
+				setTimeout(() => {h.classList.toggle('fadein'); }, 10000);
+				setTimeout(() => {i.classList.toggle('fadein'); }, 10000);
 				}
             }
 		</script>
