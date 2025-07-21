@@ -38,50 +38,7 @@
   <audio hidden controls autoplay loop>
       <source src="https://henryrecords.github.io/music/sub-index/home.mp3" type="audio/ogg">
     </audio>
-    <script>
-var elem = document.documentElement;
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
 
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) { /* Safari */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE11 */
-    document.msExitFullscreen();
-  }
-}
-      
-      function show() {
-  var x = document.getElementById("body");
-  var y = document.getElementById("2");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-    y.style.display = "none";
-  }
-}
-      
-      function hide() {
-  var x = document.getElementById("body");
-  var y = document.getElementById("2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-    y.style.display = "block";
-}
-</script>
   
       </body>
     </html>
