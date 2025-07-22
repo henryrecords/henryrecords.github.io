@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>主页</title>
-		<link href="https://henryrecords.github.io/attachment/mainicon.png" rel="shortcut icon" type="image/x-icon" />
+		<title>World_R</title>
+		<link href="https://henryrecords.github.io/attachment/mainicon.png" rel="shortcut icon" type="image/x-icon"/>
 		<style>
-			#left {
+			body {
+				text-align: center;
+			}
+			input {
 				width: 50%;
-				position: absolute;
-				left: 0px;
-				top: 0px;
-				bottom: 0px;
-				background-color: black;
-				background-size: cover;
-				text-align: center;
+				box-sizing: border-box;
+				border: 2px solid #ccc;
+				border-radius: 4px;
+				font-size: 16px;
+				background-size: 22px;
+				background-color: white;
+				background-image: url('https://henryrecords.github.io/attachment/mainicon.png');
+				background-position: 10px 10px; 
+				background-repeat: no-repeat;
+				padding: 12px 20px 12px 40px;
+				max-height: 100%;
+				margin-top: 20%;
 			}
-			#right {
+			input:focus {
+				border: 3px solid #555;
+			}
+			#buttons {
+				background-color: ;
 				width: 50%;
-				position: absolute;
-				right: 0px;
-				top: 0px;
-				bottom: 0px;
-				background-color: black;
-				background-size: cover;
-				text-align: center;
+				margin: auto;
+				margin-top: 15px;
 			}
-			#leftheader {
-				text-align: center;
-				font-family: "Times New Roman", Times, serif;
-				margin-top: 27%;
-				font-size: 400%;
-				color: green;
+			.buttons {
+				width: 14.2857%;
+				border-width: 0px;
+				border-color: gray;
+				padding: 5px;
+				transition-duration: 0.4s;
+				background-color: white;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+				cursor: pointer;
+				float: left;
 			}
-			#rightheader {
-				text-align: center;
-				font-family: "Times New Roman", Times, serif;
-				margin-top: 27%;
-				font-size: 400%;
-				color: red;
-			}
-			.button {
-				min-width: 200px;
-				margin-top: 0px;
-				background-color: transparent;
-				border-color: white;
-				border-width: 2px;
-				text-align: center;
+			.buttons:hover {
+  				background-color: black;
+				color: white;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="left">
-			<h1 id="leftheader">World_R</h1>
-			<button class="button" style="color: green;" onclick="location.href='https://henryrecords.github.io/world_R/index.html';">-进入 World_R-</button>
-		</div>
-		<div id="right">
-			<h1 id="rightheader">World_X</h1>
-			<button class="button" style="color: red;" onclick="location.href='https://henryrecords.github.io/world_X/index.html';">-启程 World_X-</button>
+		<input placeholder="^...^" list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
+		<div id="buttons">
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/1_dairy/index.html';">日记</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/2_record/index.html';">备忘</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/3_literature/index.html';">文学</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/4_media/index.html';">媒体</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/5_academic/index.html';">学术</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/6_contact/index.html';">外交</button>
+			<button class="buttons" onclick="location.href='https://henryrecords.github.io/world_R/directory/7_finance/index.html';">财务</button>
 		</div>
 		<a href="https://www.google.com">
 			<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
 				<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
-					<p style="font-size: 20px;">HenryRecords</p>
+					<p style="font-size: 20px;"><strong>H</strong>enry<strong>R</strong>ecords</p>
+					<p>.github.io</p>
 				</div>
 			</div>
 		</a>
 		<a href="https://www.bing.com">
 			<div style="position: fixed; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
 				<div id="footright" style="line-height: 1%; text-align: center; color: white;">
-					<p style="font-size: 20px;">NWEI</p>
+					<p style="font-size: 20px;"><strong>NW</strong>EI</p>
+					<p>.github.io</p>
 				</div>
 			</div>
 		</a>
@@ -76,5 +80,47 @@
 				<img src="https://henryrecords.github.io/attachment/mainlogo.png" style="width: 75px;"/>
 			</div>
 		</div>
+		<script>
+			function search() {
+				var password = document.getElementById("search").value;
+				if (password == "日记") {
+             		window.open("https://henryrecords.github.io/world_R/directory/1_dairy/index.html");
+				}
+				else if (password == "备忘") {
+					window.open("https://henryrecords.github.io/world_R/directory/2_record/index.html");
+				}
+				else if (password == "文学") {
+             		window.open("https://henryrecords.github.io/world_R/directory/3_literature/index.html");
+				}
+				else if (password == "媒体") {
+             		window.open("https://henryrecords.github.io/world_R/directory/4_media/index.html");
+				}
+				else if (password == "学术") {
+             		window.open("https://henryrecords.github.io/world_R/directory/5_academic/index.html");
+				}
+				else if (password == "外交") {
+             		window.open("https://henryrecords.github.io/world_R/directory/6_contact/index.html");
+				}
+				else if (password == "财务") {
+             		window.open("https://henryrecords.github.io/world_R/directory/7_finance/index.html");
+				}
+				else if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
+             		document.getElementById('search').value = "I'm fine, thank you. And you?";
+				}
+				else if ((password == "what's the date") || (password == "What's the date") || (password == "what's the date?") || (password == "What's the date?")) {
+             		document.getElementById('search').value = "Dec-06, 2021";
+				}
+				else if ((password == "what's your name") || (password == "What's your name") || (password == "what's your name?") || (password == "What's your name?")) {
+             		document.getElementById('search').value = "Lord Search Bar.";
+				}
+				else if ((password == "see you") || (password == "See you") || (password == "see you.") || (password == "See you.")) {
+             		document.getElementById('search').value = "Bye...";
+					document.getElementById('index').classList.toggle('fadein');
+				}
+				else {
+					document.getElementById('search').value = "暂无搜索结果";
+				}
+			}
+		</script>
 	</body>
 </html>
