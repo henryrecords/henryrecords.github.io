@@ -28,6 +28,21 @@
 				input{
 					width: 50%;
 				}
+				#text{
+					margin-top: 15%;
+				}
+				.pconly{
+					display: block;
+				}
+			}
+			.pconly{
+					display: none;
+				}
+			text{
+				margin-top: 30%; 
+				font-size:20px; 
+				font-family: Times New Roman, Times, Georgia, serif; color: white;
+			}
 			input:focus {
 				border: 1px solid #000;
 			}
@@ -60,11 +75,7 @@
 	</head>
 	<body>
 		<!-- NWEI颜色#003060 #005555 #600000 orange -->
-		<p style="
-			@media (min-width: 1919px) {
-				margin-top: 15%; 
-			}
-			margin-top: 30%; font-size:20px; font-family: Times New Roman, Times, Georgia, serif; color: white;">
+		<p id="text">
 			<strong style="font-size: 50px; color:orange;">N</strong>XYC 
 			<strong style="font-size: 50px; color:orange;">W</strong>iztalia 
 			<strong style="font-size: 50px; color:orange;">E</strong>zerac 
@@ -82,7 +93,7 @@
 		</div>
 		-->
 		<a href="https://www.google.com">
-			<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
+			<div class="pconly" style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
 				<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
 					<p style="font-size: 20px; font-family: Times New Roman, Times, Georgia, serif;">HenryRecords</p>
 					<p style="font-family: Times New Roman, Times, Georgia, serif;">.github.io</p>
@@ -90,7 +101,7 @@
 			</div>
 		</a>
 		<a href="https://www.bing.com">
-			<div style="position: fixed; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
+			<div class="pconly" style="position: fixed; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
 				<div id="footright" style="line-height: 1%; text-align: center; color: white;">
 					<p style="font-size: 20px; font-family: Times New Roman, Times, Georgia, serif;">Project</p>
 					<p style="font-family: Times New Roman, Times, Georgia, serif;">NWEI</p>
