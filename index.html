@@ -35,6 +35,20 @@
 			input:focus {
 				border: 1px solid #000;
 			}
+			#footleft{
+				position: fixed; 
+				padding: 0px 25% 0px 0px; 
+				left: 0px; bottom: 0px; right: 50%; 
+				background-color: black; 
+				display: inline-block;
+			}
+			#footright{
+				position: fixed; 
+				padding: 0px 0px 0px 25%; 
+				right: 0px; bottom: 0px; left: 50%; 
+				background-color: black;"
+				display: inline-block;
+			}
 			/* #buttons {
 				background-color: ;
 				width: 50%;
@@ -66,8 +80,11 @@
 				#text{
 					margin-top: 15%;
 				}
-				.pconly{
-					display: block;
+				#footleft{
+					display: inline-block;
+				}
+				#footright{
+					display: inline-block;
 				}
 			}
 		</style>
@@ -92,16 +109,16 @@
 		</div>
 		-->
 		<a href="https://www.google.com">
-			<div style="position: fixed; padding: 0px 25% 0px 0px; left: 0px; bottom: 0px; right: 50%; background-color: black; display: inline-block;">
-				<div id="footleft" style="line-height: 1%; text-align: center; color: white;">
+			<div id="footleft">
+				<div style="line-height: 1%; text-align: center; color: white;">
 					<p style="font-size: 20px; font-family: Times New Roman, Times, Georgia, serif;">HenryRecords</p>
 					<p style="font-family: Times New Roman, Times, Georgia, serif;">.github.io</p>
 				</div>
 			</div>
 		</a>
 		<a href="https://www.bing.com">
-			<div style="position: fixed; padding: 0px 0px 0px 25%; right: 0px; bottom: 0px; left: 50%; background-color: black;">
-				<div id="footright" style="line-height: 1%; text-align: center; color: white;">
+			<div id="footright">
+				<div style="line-height: 1%; text-align: center; color: white;">
 					<p style="font-size: 20px; font-family: Times New Roman, Times, Georgia, serif;">Project</p>
 					<p style="font-family: Times New Roman, Times, Georgia, serif;">NWEI</p>
 				</div>
