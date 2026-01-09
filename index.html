@@ -2,106 +2,13 @@
 <html>
 	<head>
 		<title>Home</title>
+		<link rel="stylesheet" href="https://henryrecords.github.io/index.css">
+		<script src="https://henryrecords.github.io/index.js" defer></script>
 		<link href="https://henryrecords.github.io/attachment/mainicon.png" rel="shortcut icon" type="image/x-icon"/>
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			body {
-				text-align: center;
-				background-color: #000000;
-			}
-			input {
-				color: black;
-				width: 90%;
-				box-sizing: border-box;
-				border: 0px solid #000;
-				border-radius: 999px;
-				font-size: 16px;
-				background-size: 22px;
-				background-color: white;
-				background-image: url('https://henryrecords.github.io/attachment/mainicon.png');
-				background-position: 10px 10px; 
-				background-repeat: no-repeat;
-				padding: 12px 20px 12px 40px;
-				max-height: 100%;
-			}
-			.pconly{
-					display: none;
-				}
-			#text{
-				margin-top: 20vh; 
-				font-size: 20px; 
-				color: white;
-				font-family: Times New Roman, Times, Georgia, serif;
-			}
-			input:focus {
-				border: 1px solid #000;
-			}
-			#footleft{
-				position: fixed; 
-				padding: 0px 25% 0px 0px; 
-				left: 0px; bottom: 0px; right: 50%; 
-				background-color: black; 
-				display: none;
-			}
-			#footright{
-				position: fixed; 
-				padding: 0px 0px 0px 25%; 
-				right: 0px; bottom: 0px; left: 50%; 
-				background-color: black;
-				display: none;
-			}
-			strong {
-				font-size: 50px; 
-				color: orange;
-			}
-			.dancingscript {
-				display: none;
-				font-family: 'Dancing Script', cursive;
-			}
-			/* #buttons {
-				background-color: ;
-				width: 50%;
-				margin: auto;
-				margin-top: 15px;
-			}
-			.buttons {
-				color: black;
-				width: calc(14.2857% - 10px);
-				margin: 0 5px;
-				box-sizing: border-box;
-				border-width: 0px;
-				border-color: white;
-				padding: 5px;
-				transition-duration: 0.4s;
-				background-color: white;
-				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-				cursor: pointer;
-				float: left;
-			}
-			.buttons:hover {
-  				background-color: black;
-				color: white;
-			} */
-			@media (min-aspect-ratio: 1/1) {
-				input{
-					width: 50%;
-					border-radius: 4px;
-				}
-				#text{
-				}
-				#footleft{
-					display: inline-block;
-				}
-				#footright{
-					display: inline-block;
-				}
-				.dancingscript {
-					display: inline-block;
-				}
-			}
-		</style>
 	</head>
+	
 	<body>
 		<!-- NWEI颜色#003060 #005555 #600000 orange -->
 		<h1 id="text">
@@ -143,47 +50,5 @@
 				<img src="https://henryrecords.github.io/attachment/mainlogo.png" style="width: 65px;padding:0px 0px 0.66% 0px"/>
 			</div>
 		</div>
-		<script>
-			function search() {
-				var password = document.getElementById("search").value;
-				/* if (password == "日记") {
-             		window.open("https://henryrecords.github.io/world_R/directory/1_dairy/index.html");
-				}
-				else if (password == "备忘") {
-					window.open("https://henryrecords.github.io/world_R/directory/2_record/index.html");
-				}
-				else if (password == "文学") {
-             		window.open("https://henryrecords.github.io/world_R/directory/3_literature/index.html");
-				}
-				else if (password == "媒体") {
-             		window.open("https://henryrecords.github.io/world_R/directory/4_media/index.html");
-				}
-				else if (password == "学术") {
-             		window.open("https://henryrecords.github.io/world_R/directory/5_academic/index.html");
-				}
-				else if (password == "外交") {
-             		window.open("https://henryrecords.github.io/world_R/directory/6_contact/index.html");
-				}
-				else if (password == "财务") {
-             		window.open("https://henryrecords.github.io/world_R/directory/7_finance/index.html");
-				} */
-				if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
-             		document.getElementById('search').value = "I'm fine, thank you. And you?";
-				}
-				else if ((password == "what's the date") || (password == "What's the date") || (password == "what's the date?") || (password == "What's the date?")) {
-             		document.getElementById('search').value = "Dec-06, 2021";
-				}
-				else if ((password == "what's your name") || (password == "What's your name") || (password == "what's your name?") || (password == "What's your name?")) {
-             		document.getElementById('search').value = "Lord Search Bar.";
-				}
-				else if ((password == "see you") || (password == "See you") || (password == "see you.") || (password == "See you.")) {
-             		document.getElementById('search').value = "Bye...";
-					document.getElementById('index').classList.toggle('fadein');
-				}
-				else {
-					document.getElementById('search').value = "暂无搜索结果";
-				}
-			}
-		</script>
 	</body>
 </html>
