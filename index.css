@@ -24,7 +24,7 @@ body {
 				margin-top: 20vh; 
 				font-size: 20px; 
 				color: white;
-				font-family: Times New Roman, Times, Georgia, serif;
+				font-family: 'Cinzel', serif;
 			}
 			input:focus {
 				border: 1px solid #000;
