@@ -29,8 +29,9 @@
 				}
 			#text{
 				margin-top: 20vh; 
-				font-size:20px; 
-				font-family: Times New Roman, Times, Georgia, serif; color: white;
+				font-size: 20px; 
+				color: white;
+				font-family: Times New Roman, Times, Georgia, serif;
 			}
 			input:focus {
 				border: 1px solid #000;
@@ -48,6 +49,14 @@
 				right: 0px; bottom: 0px; left: 50%; 
 				background-color: black;
 				display: none;
+			}
+			strong {
+				font-size: 50px; 
+				color: orange;
+			}
+			.dancingscript {
+				display: none;
+				font-family: 'Dancing Script', cursive;
 			}
 			/* #buttons {
 				background-color: ;
@@ -79,7 +88,6 @@
 					border-radius: 4px;
 				}
 				#text{
-					margin-top: 15vh;
 				}
 				#footleft{
 					display: inline-block;
@@ -87,16 +95,20 @@
 				#footright{
 					display: inline-block;
 				}
+				.dancingscript {
+					display: block;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<!-- NWEI颜色#003060 #005555 #600000 orange -->
-		<p id="text">
-			<strong style="font-size: 50px; color:orange;">N</strong>XYC 
-			<strong style="font-size: 50px; color:orange;">W</strong>iztalia 
-			<strong style="font-size: 50px; color:orange;">E</strong>zerac 
-			<strong style="font-size: 50px; color:orange;">I</strong>den</p>
+		<h1 id="text">
+			<strong>N</strong><p class="dancingscript">XYC</p> 
+			<strong>W</strong><p class="dancingscript">iztalia</p> 
+			<strong>E</strong><p class="dancingscript">zerac</p> 
+			<strong>I</strong><p class="dancingscript">den</p>
+		</h1>
 		<input placeholder="^...^" list="select" id="search" onkeydown="if (event.keyCode == 13) search()"></input>
 		<!-- 这是隐藏的按钮
 		<div id="buttons">
@@ -133,7 +145,7 @@
 		<script>
 			function search() {
 				var password = document.getElementById("search").value;
-				if (password == "日记") {
+				/* if (password == "日记") {
              		window.open("https://henryrecords.github.io/world_R/directory/1_dairy/index.html");
 				}
 				else if (password == "备忘") {
@@ -153,8 +165,8 @@
 				}
 				else if (password == "财务") {
              		window.open("https://henryrecords.github.io/world_R/directory/7_finance/index.html");
-				}
-				else if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
+				} */
+				if ((password == "how are you") || (password == "How are you") || (password == "How are you?") || (password == "how are you?")) {
              		document.getElementById('search').value = "I'm fine, thank you. And you?";
 				}
 				else if ((password == "what's the date") || (password == "What's the date") || (password == "what's the date?") || (password == "What's the date?")) {
