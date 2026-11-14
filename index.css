@@ -7,10 +7,10 @@ body {
 				width: 90%;
 				box-sizing: border-box;
 				border: 0px solid #000;
-				border-radius: 999px;
+				border-radius: 500px;
 				font-size: 16px;
 				background-size: 22px;
-				background-color: #white;
+				background-color: #gray;
 				background-image: url('https://henryrecords.github.io/attachment/mainicon.png');
 				background-position: 10px 10px; 
 				background-repeat: no-repeat;
