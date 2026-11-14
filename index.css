@@ -1,6 +1,6 @@
 body {
 				text-align: center;
-				background-color: #000000;
+				background-color: #41384b;
 			}
 			input {
 				color: black;
@@ -10,7 +10,7 @@ body {
 				border-radius: 999px;
 				font-size: 16px;
 				background-size: 22px;
-				background-color: #41384b;
+				background-color: #white;
 				background-image: url('https://henryrecords.github.io/attachment/mainicon.png');
 				background-position: 10px 10px; 
 				background-repeat: no-repeat;
